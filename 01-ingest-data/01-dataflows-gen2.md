@@ -48,6 +48,7 @@ Data Source ──> Dataflow Gen2 [ Power Query Editor (Clean/Transform) ] ─�
 *   **The Challenge:** A global retail company has sales and inventory data scattered across various sources in different stores. The business requests a **semantic model** that consolidates all these disparate sources.
 *   **The Problem with Manual Work:** Without an automated dataflow, you would have to manually extract and transform data from every source daily, which is slow and error-prone.
 *   **The Solution (Dataflow Gen2):** It allows you to prepare and clean the data to ensure consistency, and stage it in your preferred destination (Lakehouse/Warehouse).
+*   **Core Architectural Principle (HIGH YIELD):** Always perform transformations **upstream** (closer to the data source) rather than downstream (inside Power BI Desktop/reports). This improves report performance, ensures consistent data logic for all analysts, and enables reusable ETL code.
 
 ---
 
