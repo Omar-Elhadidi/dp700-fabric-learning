@@ -91,6 +91,7 @@ You can configure your Fabric pipelines in two ways depending on the order of op
 ### Limitations (Must Know)
 *   ❌ **No Row-Level Security (RLS):** Dataflows Gen2 do **NOT** support row-level security. Security must be managed at the database/semantic model layer instead.
 *   ❌ **Not a Warehouse Replacement:** They are processing pipelines, not a final database storage solution.
+*   ❌ **Capacity Workspace Required:** You must run Dataflows Gen2 inside a workspace that is assigned to a **Fabric Capacity** (or Trial capacity), not a shared personal workspace.
 
 ---
 
@@ -98,7 +99,10 @@ You can configure your Fabric pipelines in two ways depending on the order of op
 
 ### Visual UI Components
 *   **Queries Pane (Left Side):** Lists your data sources/tables (queries).
-    *   *Key Feature:* **Disable Load**. If you use a query only as an intermediate step (e.g., to merge with another query) but do not want it written to your final database, right-click and uncheck "Enable Load". This optimizes performance.
+    *   *Disable Load:* If a query is used only as an intermediate step (e.g., to merge with another query) but you do not want it written to your database, uncheck "Enable Load" to optimize performance.
+    *   *Duplicate vs. Reference (HIGH YIELD):* 
+        *   **Duplicate:** Creates a complete copy of the query with all its M transformation steps. Changes to the original do not affect the duplicate.
+        *   **Reference:** Creates a link to the original query. The new query starts with the output of the original query. If the original query changes, the referenced query automatically updates (useful for building dimension tables from a single source).
 *   **Diagram View (Top):** Visual flowchart showing data sources and applied steps. You can turn this off to save screen space.
 *   **Data Preview Pane (Center):** Shows a small subset of rows. You can drag columns or right-click to apply transformations directly on the preview.
 *   **Query Settings Pane (Right Side):**
