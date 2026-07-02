@@ -1,6 +1,6 @@
-# 🧪 Lab 1: Create and Use Dataflows (Gen2) in Microsoft Fabric
+# 🧪 Exercise 1: Create and Use Dataflows (Gen2) in Microsoft Fabric
 
-This lab walks through setting up a Lakehouse, ingesting CSV data via Dataflow Gen2, transforming it using Power Query M code, setting up a database destination, and orchestrating it using a Data Pipeline.
+This exercise walks through setting up a Lakehouse, ingesting CSV data via Dataflow Gen2, transforming it using Power Query M code, setting up a database destination, and orchestrating it using a Data Pipeline.
 
 ---
 

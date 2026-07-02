@@ -13,7 +13,7 @@ The repository is organized directly by the 5 official learning paths of the DP-
 ├── 03-data-warehouse/
 ├── 04-real-time-intelligence/
 ├── 05-administration/
-├── labs/                             <-- Lab screenshots, SQL & PySpark scripts
+├── exercises/                        <-- Exercise screenshots, SQL & PySpark scripts
 │   ├── 01-ingest-data/
 │   └── ...
 ├── dp700_study_plan.md               <-- 6-Week detailed schedule
