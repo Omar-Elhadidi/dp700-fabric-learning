@@ -35,6 +35,10 @@ This exercise walks through setting up a Lakehouse, ingesting CSV data via Dataf
         ```
     *   *Data Type Check:* Ensure `OrderDate` is set to **Date** and `MonthNo` is set to **Whole Number**.
 
+![Power Query Editor with Custom Column](01_power_query.png)
+
+![Diagram View showing data flow](01_diagram_view.png)
+
 ---
 
 ## 3. Data Destination Configuration (HIGH YIELD)
@@ -57,6 +61,8 @@ To run the Dataflow automatically as part of a scheduled or sequential workflow:
 2.  Add a **Dataflow activity** to the canvas.
 3.  Select the activity, go to the **Settings** tab, and select your `Dataflow 1` from the dropdown.
 4.  Run the pipeline. Once successful, go to your Lakehouse, refresh the tables, and view the loaded `orders` table.
+
+![Populated orders table in Lakehouse](01_lakehouse_table.png)
 
 ---
 
