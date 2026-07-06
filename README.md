@@ -9,8 +9,8 @@ Organized by the 5 official DP-700 learning paths, with module subfolders inside
 ```text
 ├── 01-Ingest-Data/
 │   ├── 01-dataflows-gen2/        ✅ Completed
-│   ├── 02-orchestrate-pipelines/ 🔄 In Progress
-│   ├── 03-apache-spark/
+│   ├── 02-orchestrate-pipelines/ ✅ Completed
+│   ├── 03-apache-spark/          🔄 In Progress
 │   └── 04-real-time-eventhouse/
 ├── 02-Implement-Lakehouse/
 ├── 03-Real-Time-Intelligence/
