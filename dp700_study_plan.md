@@ -1,151 +1,59 @@
-# DP-700 Study Plan — 45 Days to Exam
+# 🚀 Microsoft Fabric Data Engineer (DP-700) Study Plan
 
-**Exam:** August 11, 2026 · 10:30 AM · GEF Alexandria  
-**Starting level:** Basic SQL, Basic Python  
-**Daily commitment:** 2-3 hours (weekdays), 4-5 hours (weekends)  
-**Total estimated study hours:** ~130 hours
-
----
-
-## Primary Study Resource
-
-**Microsoft Learn — DP-700 Learning Path (FREE):**  
-[https://learn.microsoft.com/en-us/credentials/certifications/fabric-data-engineer-associate/](https://learn.microsoft.com/en-us/credentials/certifications/fabric-data-engineer-associate/)
-
-This page links to ALL the official modules. Work through them in the order below.
-
-**Practice Assessment (FREE):**  
-Microsoft provides a free practice test on the same page. Take it at the end of Week 4 and again in Week 6.
+*   **Exam Date:** August 11, 2026 · 10:30 AM · GEF Alexandria
+*   **Current Date:** July 7, 2026
+*   **Total Days Left:** 35 Days
+*   **🚨 CRITICAL CONSTRAINT:** Your Azure Free Capacity ($200 credits) expires in **22 Days** (around July 29). All hands-on exercises and your portfolio project must be completed before this date!
 
 ---
 
-## Week 1: June 27 – July 3 — Fabric Foundations
+## 📅 Phase 1: Hands-on Capacity Window (July 7 – July 29)
+**Goal:** Complete all 25 remaining modules and hands-on exercises while your Azure Fabric Capacity is active.
 
-**Goal:** Understand what Microsoft Fabric IS, how it's different from normal databases, and how all the pieces connect.
+### Week 1 (July 7 – July 13): Ingestion & Lakehouse Foundations
+*   **July 7 (Tue):** Module 3: Use Apache Spark in Microsoft Fabric (Theory + PySpark setup)
+*   **July 8 (Wed):** Module 3 Exercise: Run PySpark notebook transformations
+*   **July 9 (Thu):** Module 4: Work with real-time data in an Eventhouse (KQL/Kusto introduction)
+*   **July 10 (Fri):** LP 2: Introduction to Fabric Lakehouse & Lakehouse schemas
+*   **July 11 – 12 (Sat-Sun):** LP 2: Ingesting files into Lakehouse + Organizing files (Bronze/Silver/Gold staging)
+*   **July 13 (Mon):** LP 2: Delta Lake table optimizations (V-Order, compaction, time-travel queries)
 
-| Day | Focus | Time |
-|---|---|---|
-| Fri-Sat | Read the "Get started with Microsoft Fabric" module on Microsoft Learn | 3-4h |
-| Sun | Read "Introduction to Lakehouses" and "Introduction to Data Warehouses in Fabric" | 4-5h |
-| Mon-Thu | Hands-on: Create a free Fabric trial workspace. Create a Lakehouse. Upload a small CSV. Query it with SQL | 2-3h/day |
+### Week 2 (July 14 – July 20): Data Warehousing & Real-Time Analytics
+*   **July 14 (Tue):** LP 3: Real-Time Intelligence concepts & Eventstreams ingestion
+*   **July 15 (Wed):** LP 3: KQL databases, querying with KQL syntax + Exercise
+*   **July 16 (Thu):** LP 4: Introduction to Data Warehouses (difference between SQL Endpoint & Data Warehouse)
+*   **July 17 (Fri):** LP 4: Designing Data Warehouse schemas (Star schema, Fact vs. Dimension tables)
+*   **July 18 – 19 (Sat-Sun):** LP 4: Loading data using T-SQL (COPY INTO, INSERT INTO) + Warehouse transformations (Stored procedures, SQL views) + Exercises
+*   **July 20 (Mon):** LP 4: Query optimization & performance tuning in Data Warehouse
 
-**By end of week you should know:**
-- What OneLake, Lakehouse, and Warehouse are (and the difference)
-- How to navigate the Fabric portal
-- What the Medallion Architecture means (Bronze/Silver/Gold)
-
----
-
-## Week 2: July 4 – July 10 — Data Ingestion (Pipelines & Dataflows)
-
-**Goal:** Learn how data gets INTO Fabric.
-
-| Day | Focus | Time |
-|---|---|---|
-| Fri-Sat | Read "Ingest data with Data Factory pipelines" and "Ingest data with Dataflows Gen2" modules | 3-4h |
-| Sun | Hands-on: Build a simple pipeline that copies data from a public source into your Lakehouse | 4-5h |
-| Mon-Thu | Read "Use Spark notebooks" module. Write a basic PySpark notebook that reads and cleans data | 2-3h/day |
-
-**By end of week you should know:**
-- How to build a Data Factory pipeline (copy activity)
-- The difference between Pipelines and Dataflows Gen2
-- How to write basic PySpark in a Fabric notebook
+### Week 3 (July 21 – July 29): Security, Git & The Medallion Mini-Project
+*   **July 21 (Tue):** LP 5: Security in Fabric (Workspace roles vs. Item permissions, Row-Level Security (RLS) & Column-Level Security (CLS))
+*   **July 22 (Wed):** LP 5: Fabric Administration (Capacity Metric App, monitoring pipeline runs & operations)
+*   **July 23 (Thu):** LP 5: Git Integration & CI/CD in Fabric (Deployment Pipelines)
+*   **July 24 – 26 (Fri-Sun):** 🛠️ **Medallion Mini-Project:** Build a complete end-to-end flow: Ingest raw CSV ──> Clean with PySpark in Lakehouse ──> Load into Warehouse tables using T-SQL ──> Apply Row-Level Security.
+*   **July 27 – 29 (Mon-Wed):** Buffer days. Re-run any failed exercises, download remaining screenshots, and **Clean up/Delete your Azure Capacity resources** to avoid any unexpected billing before expiration.
 
 ---
 
-## Week 3: July 11 – July 17 — Data Transformation & Modeling
+## 📅 Phase 2: Theory & Practice Exam Window (July 30 – August 10)
+**Goal:** Practice assessment drilling, weakness analysis, and concept lookups (no active capacity required).
 
-**Goal:** Learn how data gets TRANSFORMED inside Fabric.
+### Week 4 (July 30 – August 5): Mock Exam Drilling
+*   **July 30 (Thu):** **First Practice Assessment (Diagnostic).** Take the official free Microsoft practice test. Don't study beforehand. Identify your weak paths.
+*   **July 31 (Fri):** Deep-dive review of all questions you missed. Look up definitions in your study notes.
+*   **August 1 – 2 (Sat-Sun):** Weakness drilling: Re-read the Microsoft Learn pages for your lowest-scoring topics.
+*   **August 3 – 5 (Mon-Wed):** Review repository notes (`notes.md` in all folders). Take the Practice Assessment a 2nd time. Target: 75%+.
 
-| Day | Focus | Time |
-|---|---|---|
-| Fri-Sat | Read "Transform data with Spark" and "Use Delta Lake tables" modules | 3-4h |
-| Sun | Hands-on: Transform your Week 2 data through Bronze → Silver → Gold layers | 4-5h |
-| Mon-Thu | Read "Design a data warehouse" and "Load data into a warehouse" modules. Practice writing SQL queries in the warehouse | 2-3h/day |
-
-**By end of week you should know:**
-- Delta Lake tables and why they matter
-- How to write SQL transformations in Fabric warehouses
-- Star schema basics (fact tables vs. dimension tables)
-
----
-
-## Week 4: July 18 – July 24 — Security, Monitoring & Optimization
-
-**Goal:** Cover the exam topics most people skip (and lose points on).
-
-| Day | Focus | Time |
-|---|---|---|
-| Fri-Sat | Read "Implement security in Fabric" and "Administer Fabric" modules | 3-4h |
-| Sun | Read "Monitor Fabric" and "Optimize performance" modules | 4-5h |
-| Mon-Wed | Review all modules completed so far. Fill gaps in notes | 2-3h/day |
-| Thu | **Take the FREE Microsoft Practice Assessment for the first time.** Don't study beforehand — treat it as a diagnostic | 2h |
-
-**By end of week you should know:**
-- Workspace roles and row-level security (RLS)
-- How to monitor pipeline runs and query performance
-- Your weak areas (from the practice test results)
+### Week 5 (August 6 – August 10): Final Polish
+*   **August 6 (Thu):** Take the Practice Assessment a 3rd time. Target: 85%+.
+*   **August 7 (Fri):** Practice navigating the online Microsoft Learn documentation. (Since the exam is open-book, you must know how to search quickly under timer pressure).
+*   **August 8 – 9 (Sat-Sun):** Light review. Check your study plan checklist. Sleep well.
+*   **August 10 (Mon):** Relax. No heavy studying. Pack your ID card.
+*   **August 11 (Tue):** **EXAM DAY (10:30 AM at GEF Alexandria)**
 
 ---
 
-## Week 5: July 25 – July 31 — Weak Spot Drilling
-
-**Goal:** Attack whatever the practice test exposed as weak.
-
-| Day | Focus | Time |
-|---|---|---|
-| Fri-Sun | Re-study the modules where you scored lowest on the practice assessment | 4-5h/day |
-| Mon-Thu | Hands-on practice in your Fabric trial: rebuild a complete pipeline end-to-end (ingest → transform → warehouse → query) | 2-3h/day |
-
-**By end of week you should be able to:**
-- Build a complete data pipeline in Fabric from memory
-- Explain the difference between Lakehouse, Warehouse, and SQL Analytics Endpoint
-- Answer security and monitoring questions without guessing
-
----
-
-## Week 6: August 1 – August 10 — Final Review & Mock Exams
-
-**Goal:** Simulate exam conditions. Lock in confidence.
-
-| Day | Focus | Time |
-|---|---|---|
-| Fri | **Take the practice assessment again.** Target: 80%+ | 2h |
-| Sat-Sun | Review any remaining weak spots. Re-read notes | 4h/day |
-| Mon-Wed | Light review only. Read your own notes. Don't cram new material | 1-2h/day |
-| Thu (Aug 7) | Take the practice assessment one final time | 2h |
-| Fri-Sun | **REST.** Light review only. No heavy studying. Sleep well | 1h max |
-| **Mon Aug 11** | **EXAM DAY — 10:30 AM — GEF Alexandria** | — |
-
----
-
-## Daily Non-Negotiables (alongside studying)
-
-These take 20 minutes total. Don't skip them.
-
-- [ ] **2 Upwork proposals** (15 min)
-- [ ] **1 GitHub commit** (push your study notes or Fabric screenshots — keeps the graph green)
-
----
-
-## Exam Day Checklist
-
-- [ ] Bring government-issued photo ID (national ID or passport)
-- [ ] Arrive 30 minutes early (10:00 AM)
-- [ ] No phones, notes, or smartwatches allowed inside
-- [ ] The exam IS open-book: you can access Microsoft Learn during the exam
-- [ ] You need **700/1000 to pass** (70%)
-- [ ] Results are immediate — you'll know before you leave
-
----
-
-## Key Reminders
-
-> [!IMPORTANT]
-> **The exam allows you to use Microsoft Learn during the test.** This means you don't need to memorize every detail — you need to understand concepts well enough to know WHERE to look. Focus on understanding, not memorization.
-
-> [!WARNING]  
-> **The Fabric free trial lasts 60 days.** Sign up NOW so it doesn't expire before your exam. You need hands-on practice, not just reading.
-
-> [!TIP]
-> **If you feel overwhelmed:** Remember that thousands of people pass this exam every month with similar backgrounds. The pass rate for well-prepared candidates is high. You have 45 days and a structured plan. That is enough.
+## 📋 Daily Non-Negotiables
+These keep your habits consistent without burning you out:
+- [ ] **15-Min Upwork Mandate:** Send 2 high-quality proposals.
+- [ ] **Daily GitHub Commit:** Commit your study notes or screenshots (keeps the graph green).
