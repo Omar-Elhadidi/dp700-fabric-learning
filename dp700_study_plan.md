@@ -70,13 +70,14 @@ Below is the complete list of modules across all 5 official learning paths. Dupl
 *   **July 19 (Sun):** Study **M17:** Secure a Microsoft Fabric data warehouse
 *   **July 20 (Mon):** Catch-up / Buffer day for any Warehouse SQL exercises
 
-### Week 3 (July 21 – July 29): Real-Time Intelligence, Admin & Project
+### Week 3 (July 21 – July 29): Real-Time Intelligence & Admin
 *   **July 21 (Tue):** Study **M19 & M20:** Real-Time Intelligence & Eventhouse creation
 *   **July 22 (Wed):** Study **M21 & M22:** Eventstreams ingestion & KQL database queries
-*   **July 23 (Thu):** Study **M24 & M25:** Administer Fabric & Manage Capacity/Performance
-*   **July 24 (Fri):** Study **M26 & M27:** Git Integration & Deployment pipelines
-*   **July 25 – 26 (Sat-Sun):** 🛠️ **Medallion Mini-Project** (Build a unified ELT flow using Spark, Warehouse, and Security)
-*   **July 27 – 29 (Mon-Wed):** Clean up Azure resources, confirm all screenshots are in Git, capacity cleanup.
+*   **July 23 (Thu):** Study **M24:** Administer Microsoft Fabric
+*   **July 24 (Fri):** Study **M25:** Manage Fabric capacity and performance
+*   **July 25 (Sat):** Study **M26:** Implement Git integration in Microsoft Fabric
+*   **July 26 (Sun):** Study **M27:** Implement deployment pipelines in Microsoft Fabric
+*   **July 27 – 29 (Mon-Wed):** Buffer days. Re-run any failed exercises, confirm all screenshots are in Git, and clean up/delete your Azure Capacity resources.
 
 ---
 
@@ -102,3 +103,13 @@ Below is the complete list of modules across all 5 official learning paths. Dupl
 These keep your habits consistent without burning you out:
 - [ ] **15-Min Upwork Mandate:** Send 2 high-quality proposals.
 - [ ] **Daily GitHub Commit:** Commit your study notes or screenshots (keeps the graph green).
+
+---
+
+## 🚀 Post-Exam Phase: The Portfolio Project
+Once you pass the exam on August 11, you will build a project to show on Upwork/LinkedIn. 
+*(Note: You will need to spin up a new trial or pay for a few hours of Fabric capacity to build this).*
+
+*   **Bronze Layer:** Pipeline (Copy Activity) loading a raw CSV into a Lakehouse.
+*   **Silver Layer:** PySpark Notebook to clean data and save as Delta Tables.
+*   **Gold Layer:** Cross-workspace SQL query loading data into a Data Warehouse Star Schema, with Row-Level Security applied.
