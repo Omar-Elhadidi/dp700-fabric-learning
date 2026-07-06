@@ -4,23 +4,28 @@ This repository contains my personal study notes, lab exercises, and implementat
 
 ## 📂 Project Structure
 
-Each module gets its own folder containing notes, exercise instructions, and screenshots:
+Organized by the 5 official learning paths, with one subfolder per module:
 
 ```text
-├── 01-dataflows-gen2/
-│   ├── notes.md
-│   ├── exercise.md
-│   └── screenshots/
-├── 02-orchestrate-pipelines/
-│   ├── notes.md
-│   ├── exercise.md
-│   └── screenshots/
-├── 03-apache-spark/          (upcoming)
-├── 04-real-time-data/        (upcoming)
-├── ...
-├── dp700_study_plan.md
-└── README.md
+📁 01-Ingest-Data/
+├── 01-dataflows-gen2/           ✅ Completed
+├── 02-orchestrate-pipelines/    ✅ Completed
+├── 03-apache-spark/
+└── 04-real-time-eventhouse/
+
+📁 02-Implement-Lakehouse/       (upcoming)
+
+📁 03-Real-Time-Intelligence/    (upcoming)
+
+📁 04-Implement-Data-Warehouse/  (upcoming)
+
+📁 05-Manage-Fabric-Environment/ (upcoming)
 ```
+
+Each module folder contains:
+- `notes.md` — Study notes
+- `exercise.md` — Hands-on exercise walkthrough
+- `screenshots/` — Visual proof of work
 
 ---
 
