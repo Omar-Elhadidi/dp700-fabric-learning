@@ -1,28 +1,26 @@
 # 🚀 Microsoft Fabric Data Engineering (DP-700 Prep)
 
-This repository contains my personal study notes and exercises as I prepare for the **Microsoft DP-700 (Fabric Data Engineer Associate)** certification exam.
+This repository contains my personal study notes, lab exercises, and implementation patterns as I prepare for the **Microsoft DP-700 (Fabric Data Engineer Associate)** certification exam.
 
 ## 📂 Project Structure
 
-Organized by the 5 official DP-700 learning paths, with module subfolders inside each:
+Each module gets its own folder containing notes, exercise instructions, and screenshots:
 
 ```text
-├── 01-Ingest-Data/
-│   ├── 01-dataflows-gen2/        ✅ Completed
-│   ├── 02-orchestrate-pipelines/ ✅ Completed
-│   ├── 03-apache-spark/          🔄 In Progress
-│   └── 04-real-time-eventhouse/
-├── 02-Implement-Lakehouse/
-├── 03-Real-Time-Intelligence/
-├── 04-Implement-Data-Warehouse/
-├── 05-Manage-Fabric-Environment/
+├── 01-dataflows-gen2/
+│   ├── notes.md
+│   ├── exercise.md
+│   └── screenshots/
+├── 02-orchestrate-pipelines/
+│   ├── notes.md
+│   ├── exercise.md
+│   └── screenshots/
+├── 03-apache-spark/          (upcoming)
+├── 04-real-time-data/        (upcoming)
+├── ...
 ├── dp700_study_plan.md
 └── README.md
 ```
-
-Each module folder contains:
-*   `notes.md` — Study notes from the Microsoft Learn content
-*   `exercise.md` — Hands-on exercise walkthrough and key takeaways
 
 ---
 
