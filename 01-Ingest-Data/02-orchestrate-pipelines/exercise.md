@@ -86,3 +86,14 @@ This pipeline uses **On Completion** (Blue Arrow) dependencies rather than **On 
     *   **Type:** `String`
     *   **Value:** `dbo.new_sales`
 *   *Result:* When the pipeline runs, the notebook executes but writes to `dbo.new_sales` instead of the default `dbo.sales`.
+
+---
+
+## 5. Verification Screenshots
+
+### Pipeline Execution Status (All Activities Succeeded)
+![Pipeline Canvas and Output Run History](screenshots/02_pipeline_run.png)
+
+### Populated Delta Table in Lakehouse
+![Loaded Sales Delta Table View](screenshots/02_lakehouse_table.png)
+
