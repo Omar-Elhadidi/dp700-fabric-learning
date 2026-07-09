@@ -1,105 +1,166 @@
 # 🧪 Exercise 3: Analyze Data with Apache Spark in Microsoft Fabric
 
-This hands-on exercise focuses on using an Apache Spark Notebook inside Microsoft Fabric to ingest raw files, perform exploratory data analysis using the PySpark DataFrame API, query data using Spark SQL, visualize results, and save the final cleaned data as a managed Delta Table.
+This exercise walks through ingesting raw sales order text files into a Fabric Lakehouse, loading the files into a Spark DataFrame using an explicit schema, performing transformations, saving data in Parquet and partitioned formats, working with Delta tables, and creating visualizations using built-in tools, Matplotlib, and Seaborn.
 
 ---
 
-## 1. Setting Up the Lab Environment
-1.  Open your Microsoft Fabric workspace.
-2.  Select your existing **Lakehouse** (or create a new one called `Lakehouse_1` if needed).
-3.  Upload the raw sales data:
-    *   Under the **Files** section, create a folder named `data`.
-    *   Upload the raw `products.csv` (or standard product/sales csv provided in the lab).
-    *   *(Note: You can fetch it directly using code in cell 1 as shown below).*
+## 1. Setup & Ingestion
+1.  Download the zipped sales files: `https://github.com/MicrosoftLearning/dp-data/raw/main/orders.zip`
+2.  Extract the archive to find three files: `2019.csv`, `2020.csv`, and `2021.csv`.
+3.  Go to your **Lakehouse Explorer**, under the **Files** folder, create a new folder named `orders`, and upload the three CSV files.
 
 ---
 
-## 2. Reading Data into a Spark DataFrame
-Create a new **Notebook** in your workspace, link it to your Lakehouse, and run the following PySpark code to read the raw CSV:
+## 2. Creating a Notebook & Defining explicit schemas
+1.  Open your Lakehouse, and select **Open notebook > New notebook**.
+2.  Import Spark SQL types, define the explicit schema to optimize performance, and load all three CSVs using a wildcard (`*`):
 
 ```python
-# Read products CSV into a DataFrame
-df = spark.read.format("csv") \
-    .option("header", "true") \
-    .option("inferSchema", "true") \
-    .load("Files/data/products.csv")
+from pyspark.sql.types import *
 
-# Display the first few rows
+orderSchema = StructType([
+    StructField("SalesOrderNumber", StringType()),
+    StructField("SalesOrderLineNumber", IntegerType()),
+    StructField("OrderDate", DateType()),
+    StructField("CustomerName", StringType()),
+    StructField("Email", StringType()),
+    StructField("Item", StringType()),
+    StructField("Quantity", IntegerType()),
+    StructField("UnitPrice", FloatType()),
+    StructField("Tax", FloatType())
+])
+
+# Read all CSV files in the folder
+df = spark.read.format("csv").schema(orderSchema).load("Files/orders/*.csv")
 display(df)
 ```
 
 ---
 
-## 3. Exploratory Data Analysis & Transformations
-Using the PySpark DataFrame API, perform basic operations to clean and aggregate the products data.
+## 3. Data Wrangling & Transformations
 
-### Filter and Select
+### Filtering & Selecting Columns
+To filter products and return specific subsets of customers who bought the product `'Road-250 Red, 52'`:
 ```python
-# Filter products that are active or within a specific price range
-df_filtered = df.filter(df['ListPrice'] > 100).select('ProductNumber', 'Name', 'ListPrice')
-display(df_filtered)
+customers = df.select("CustomerName", "Email").where(df['Item']=='Road-250 Red, 52')
+print(f"Total sales rows: {customers.count()}")
+print(f"Unique customers: {customers.distinct().count()}")
+display(customers.distinct())
 ```
 
-### Aggregate Data
+### Grouping and Aggregating
+Calculate total sales order counts grouped by order year:
 ```python
-from pyspark.sql.functions import count, avg
+from pyspark.sql.functions import *
 
-# Group by category and find average price and total count
-df_summary = df.groupBy("ProductCategory") \
-    .agg(count("ProductNumber").alias("TotalProducts"), 
-         avg("ListPrice").alias("AveragePrice"))
-display(df_summary)
+yearlySales = df.select(year(col("OrderDate")).alias("Year")).groupBy("Year").count().orderBy("Year")
+display(yearlySales)
+```
+
+### Advanced Schema Transformations
+Split strings, derive columns, and reorder dataframes:
+```python
+# Derive Year/Month columns and split CustomerName into First/Last
+transformed_df = df.withColumn("Year", year(col("OrderDate"))) \
+                    .withColumn("Month", month(col("OrderDate"))) \
+                    .withColumn("FirstName", split(col("CustomerName"), " ").getItem(0)) \
+                    .withColumn("LastName", split(col("CustomerName"), " ").getItem(1))
+
+# Select and reorder columns
+transformed_df = transformed_df["SalesOrderNumber", "SalesOrderLineNumber", "OrderDate", "Year", "Month", "FirstName", "LastName", "Email", "Item", "Quantity", "UnitPrice", "Tax"]
+display(transformed_df.limit(5))
 ```
 
 ---
 
-## 4. Querying Data with Spark SQL
-You can register your DataFrames as temporary views and query them using standard SQL syntax.
+## 4. Saving Data (Parquet vs. Partitioned Folders)
 
+### Saving to Standard Parquet
 ```python
-# Register DataFrame as a Temporary View
-df.createOrReplaceTempView("products_view")
+transformed_df.write.mode("overwrite").parquet('Files/transformed_data/orders')
 ```
 
-Now, create a new cell, switch the language to **Spark SQL** (using the `%%sql` magic command), and run:
+### Saving with Partitioning
+Physical partitioning on OneLake storage by `Year` and `Month`:
+```python
+transformed_df.write.partitionBy("Year","Month").mode("overwrite").parquet("Files/partitioned_data")
+```
 
+### Loading Specific Partition Data
+Querying only the partition for 2021 (Notice that `Year` and `Month` columns are omitted in the output DataFrame since they are constant in the folder hierarchy):
+```python
+orders_2021_df = spark.read.format("parquet").load("Files/partitioned_data/Year=2021/Month=*")
+display(orders_2021_df)
+```
+
+---
+
+## 5. Working with Delta Tables & Spark SQL
+Create a managed Delta table in the Lakehouse catalog and query it directly using Spark SQL cell magics.
+
+```python
+# Save DataFrame as a Delta Table
+df.write.format("delta").saveAsTable("salesorders")
+```
+
+### Run SQL Queries using Cell Magic (`%%sql`)
 ```sql
 %%sql
-SELECT ProductCategory, count(ProductNumber) AS ProductCount, max(ListPrice) AS MaxPrice
-FROM products_view
-GROUP BY ProductCategory
-ORDER BY ProductCount DESC
+SELECT YEAR(OrderDate) AS OrderYear,
+       SUM((UnitPrice * Quantity) + Tax) AS GrossRevenue
+FROM salesorders
+GROUP BY YEAR(OrderDate)
+ORDER BY OrderYear;
 ```
 
 ---
 
-## 5. Visualizing Data in Spark Notebooks
-Use the built-in Charting tool or code-based libraries to visualize your findings.
+## 6. Visualizing Spark Data
 
-### Code-Based Visualization (Matplotlib & Seaborn)
+### Built-in Charts
+Run a `SELECT * FROM salesorders` query, click **+ New chart** below the result cell, select **Bar chart**, and set the configuration properties:
+*   *X-axis:* Item
+*   *Y-axis:* Quantity (Sum)
+
+### Code-Based Visualization (Matplotlib Subplots)
 ```python
-import matplotlib.pyplot as plt
-import seaborn as sns
+from matplotlib import pyplot as plt
 
-# Convert the summary DataFrame to Pandas for charting
-pdf = df_summary.toPandas()
+# Matplotlib requires converting the Spark DF to a Pandas DF
+df_sales = spark.sql("SELECT CAST(YEAR(OrderDate) AS CHAR(4)) AS OrderYear, \
+                             SUM((UnitPrice * Quantity) + Tax) AS GrossRevenue, \
+                             COUNT(DISTINCT SalesOrderNumber) AS YearlyCounts \
+                      FROM salesorders \
+                      GROUP BY CAST(YEAR(OrderDate) AS CHAR(4)) \
+                      ORDER BY OrderYear").toPandas()
 
-# Create a bar chart showing average price by category
-plt.figure(figsize=(10, 6))
-sns.barplot(data=pdf, x="ProductCategory", y="AveragePrice")
-plt.xticks(rotation=45)
-plt.title("Average Product Price by Category")
+# Clear plot and configure 2 subplots (1 row, 2 columns)
+plt.clf()
+fig, ax = plt.subplots(1, 2, figsize = (10,4))
+
+# Bar Chart (Gross Revenue by Year)
+ax[0].bar(x=df_sales['OrderYear'], height=df_sales['GrossRevenue'], color='orange')
+ax[0].set_title('Revenue by Year')
+
+# Pie Chart (Yearly Order Volume)
+ax[1].pie(df_sales['YearlyCounts'])
+ax[1].set_title('Orders per Year')
+ax[1].legend(df_sales['OrderYear'])
+
+fig.suptitle('Sales Data Analysis')
 plt.show()
 ```
 
----
-
-## 6. Saving Data as a Managed Delta Table
-Save the cleaned and processed dataset as a managed Delta table in the Lakehouse's `Tables` directory.
-
+### Visualizing with Seaborn
 ```python
-# Write DataFrame as a managed Delta table
-df.write.format("delta").mode("overwrite").saveAsTable("dbo.products")
+import seaborn as sns
+
+plt.clf()
+sns.set_theme(style="whitegrid")
+
+# Create a Seaborn bar plot
+ax = sns.barplot(x="OrderYear", y="GrossRevenue", data=df_sales)
+plt.show()
 ```
 
 ---
