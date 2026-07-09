@@ -1,121 +1,259 @@
 # 📚 Module 3: Use Apache Spark in Microsoft Fabric
 
-This module covers the core concepts, configurations, and programmatic patterns of Apache Spark inside Microsoft Fabric. Spark is the primary engine used for big data processing, data engineering (cleansing and shaping), and data science workloads inside a Fabric Lakehouse.
+---
+
+## 1. Introduction to Apache Spark in Microsoft Fabric
+
+*   **What is Apache Spark?** An open-source, parallel processing framework designed for large-scale data processing and big data analytics.
+*   **Where is it used?** Spark runs across multiple platforms, including Azure HDInsight, Azure Synapse Analytics, and Microsoft Fabric.
+*   **Fabric Integration Benefit:** Because Spark is built natively into Fabric, it shares the same workspace environment as other services (like Lakehouses and Data Pipelines), making it much easier to integrate Spark-based data processing into your overall data engineering workflows.
 
 ---
 
-## 1. Spark Configuration in Fabric Workspaces (HIGH YIELD)
+## 2. Prepare to Use Apache Spark (Architecture & Configuration)
 
-Fabric manages Spark compute through **Spark Pools**. There are two main types of pools you must understand for the exam:
+Spark uses a distributed "divide and conquer" architecture to execute tasks across multiple computers in a cluster.
 
-### 🚀 Starter Pools vs. 🛠️ Custom Pools
+### 🖥️ Cluster Node Architecture
+A Spark cluster (known as a **Spark pool** in Fabric) coordinates work across two types of compute nodes:
+*   **Head Node (Driver Node):** Coordinates the distributed execution of processes through a driver program. It acts as the brain.
+*   **Worker Nodes (Executors):** The muscle. These nodes run executor processes that perform the actual data processing tasks (reading, transforming, writing).
+*   **Data Access:** The cluster accesses data residing in OneLake-based storage (such as a Fabric Lakehouse).
 
-| Feature | Starter Pools (Default) | Custom Pools |
-|---|---|---|
-| **Provisioning Speed** | **Fast (< 5 seconds)**. Nodes are pre-warmed. | **Slow (2 - 5 minutes)**. Clusters spin up from scratch. |
-| **Node Sizes** | Small, Medium, Large (preconfigured). | Customizable (specify exact CPU, Memory, Node Types). |
-| **Autoscale** | Automatically scales up/down within defaults. | Configurable min/max node limits. |
-| **Use Case** | Quick ad-hoc analysis, development, fast-running pipeline activities. | Production workloads, predictable large-scale ETL, memory-intensive jobs. |
-| **Billing** | Charges based on active usage duration. | Charges based on configuration run limits. |
+### 🗣️ Supported Programming Languages
+*   **Languages:** PySpark (Python-specific variant), Spark SQL, Scala (Java-based scripting), Spark R, and Java.
+*   **Best Practice:** In daily production, most data engineering workloads are accomplished using a combination of **PySpark** and **Spark SQL**.
 
-### ⚙️ Workspace-Level Spark Settings
-As a Fabric administrator or developer, you can configure Spark settings at the **Workspace Settings** level:
-1.  **Spark Compute:** Assign default starter or custom pools to the workspace.
-2.  **Automatic Tuning (Autotuning):** Automatically adjusts Spark configurations (like memory allocations and executor counts) based on query history and execution metrics.
-3.  **Environment Configurations:** Install custom Python packages (via PyPI/Conda libraries) and set custom Spark properties (like `spark.sql.shuffle.partitions`) that apply to all notebooks in the workspace.
+### ⚡ Spark Pools in Microsoft Fabric
+*   **Starter Pools (Default):** Pre-warmed nodes created by Fabric at the workspace level. They start almost instantly (< 5 seconds) and can be scaled up/down according to workloads.
+*   **Custom Pools:** User-defined configurations. You can customize:
+    *   *Node Family:* Virtual machine type. Typically, **Memory-Optimized** VM nodes perform best for Spark workloads.
+    *   *Autoscale:* Enables dynamic cluster scaling by specifying a minimum and maximum node size.
+    *   *Dynamic Allocation:* Dynamically allocates executor processes on worker nodes based on data volumes.
+*   **Capacity Override:** Fabric administrators can completely disable custom pools at the capacity settings level.
+
+### 🌐 Runtimes and Custom Environments
+*   **Spark Runtime:** A pre-packaged combination of core software versions (Apache Spark, Delta Lake, Python, Java, Scala).
+*   **Environments:** Custom environment configurations in workspaces allow you to:
+    *   Select specific default Spark Runtimes.
+    *   Install public libraries from the **Python Package Index (PyPI)** or upload custom `.whl` files.
+    *   Override default Spark configuration properties.
+    *   Attach custom pools and upload resource files.
+
+### ⚙️ High-Yield Advanced Optimizations
+
+#### 1. Native Execution Engine (Vectorized Processing)
+A vectorized engine that runs Spark queries directly on the lakehouse infrastructure, vastly improving performance when reading large Parquet/Delta tables.
+*   **Properties to Enable:**
+    *   `spark.native.enabled: true`
+    *   `spark.shuffle.manager: org.apache.spark.shuffle.sort.ColumnarShuffleManager`
+*   **Notebook Level Inline Enable:**
+    ```json
+    %%configure 
+    { 
+       "conf": {
+           "spark.native.enabled": "true", 
+           "spark.shuffle.manager": "org.apache.spark.shuffle.sort.ColumnarShuffleManager" 
+       } 
+    }
+    ```
+
+#### 2. High Concurrency Mode
+Enables multiple users or pipelines to **share the same Spark session** across different concurrent notebooks/jobs. 
+*   **Benefit:** Prevents resource wastage and reduces startup delays.
+*   **Isolation:** Ensures variables or session contexts do not bleed across notebooks.
+
+#### 3. Automatic MLFlow Logging
+Fabric automatically logs machine learning model training parameters, metrics, and models using **MLFlow** without requiring explicit logging code. This can be toggled on/off in Workspace Settings.
 
 ---
 
-## 2. Notebooks vs. Spark Job Definitions (SJD)
+## 3. Running Spark Code (Notebooks vs. Spark Job Definitions)
 
-There are two primary methods to execute Spark code in Fabric:
+Microsoft Fabric offers two key workloads to edit, manage, and execute Spark code depending on whether the task is interactive or automated:
 
 ### 📓 1. Spark Notebooks
-*   **Interface:** Interactive, multi-language (PySpark, Spark SQL, Scala, Spark R) notebook interface.
-*   **Scenarios:** 
-    *   Ad-hoc data exploration, visualization, and debugging.
-    *   Prototyping data transformations.
-    *   Iterative model development.
-*   **Orchestration:** Can be run interactively or scheduled within a Data Pipeline via the *Notebook Activity*.
+*   **Purpose:** Best for interactive data exploration, visualization, collaboration, and rapid prototyping.
+*   **Key Characteristics:**
+    *   Uses **cells** containing either Markdown (text/images) or Executable Code.
+    *   Provides **immediate feedback** by rendering results and charts directly below code cells.
+    *   Allows code in multiple languages (PySpark, SQL, Scala, R) within the same notebook using language magic commands (e.g., `%%sql`).
 
 ### 📦 2. Spark Job Definitions (SJD)
-*   **Interface:** Non-interactive submission of compiled scripts (Python `.py` files, Java/Scala `.jar` packages).
-*   **Scenarios:**
-    *   Production ETL scripts that don't need visualization.
-    *   Batch jobs scheduled to run at regular intervals.
-    *   Migrating existing Spark code from Databricks or Azure Synapse.
-*   **Performance:** Slightly faster startup time compared to notebooks because it bypasses interactive UI shell setup overhead.
+*   **Purpose:** Best for automating non-interactive production scripts as part of scheduled, recurring, or triggered ETL processes.
+*   **Key Characteristics:**
+    *   Runs compiled or plain script files (e.g., Python `.py` scripts, Java/Scala `.jar` files).
+    *   Requires a **main script file** that contains the core program logic.
+    *   Allows adding **reference files** (such as dependency libraries or helper utility scripts).
+    *   Requires a default **Lakehouse reference** so the script knows which OneLake target to run against.
+    *   Runs headless (no UI/cell feedback, output is logged in job run history).
 
 ---
 
-## 3. Spark Dataframe Operations
+## 4. Working with Spark DataFrames
 
-The Dataframe API allows you to manipulate structured data programmatically using Python (PySpark).
+While Spark natively uses Resilient Distributed Datasets (RDDs), data engineers work primarily with **DataFrames** (part of the Spark SQL library). Spark DataFrames behave similarly to Pandas but are fully optimized for distributed cluster processing.
 
-### 📥 Reading Data
+### 📥 Loading Data & Schema Design
+
+#### 1. Infer Schema (Default)
+Spark scans the file to automatically guess data types.
 ```python
-# Read from a CSV file in Lakehouse Files
-df = spark.read.format("csv") \
-    .option("header", "true") \
-    .option("inferSchema", "true") \
-    .load("Files/raw_data/sales.csv")
+%%pyspark
+df = spark.read.load('Files/data/products.csv', format='csv', header=True)
+```
+*   *Note:* Default cell language can be overridden using cell magics (e.g. `%%pyspark` for Python, `%%spark` for Scala).
 
-# Read from a Delta Table in Lakehouse Tables
-df_tables = spark.read.table("dbo.sales_table")
+#### 2. Explicit Schema (HIGH YIELD)
+Defining the schema programmatically using Spark SQL types.
+```python
+from pyspark.sql.types import *
+
+productSchema = StructType([
+    StructField("ProductID", IntegerType(), nullable=False),
+    StructField("ProductName", StringType(), nullable=True),
+    StructField("Category", StringType(), nullable=True),
+    StructField("ListPrice", FloatType(), nullable=True)
+])
+
+df = spark.read.load('Files/data/product-data.csv', format='csv', schema=productSchema, header=False)
+```
+*   > [!IMPORTANT]
+    > **Performance Benefit:** Defining an explicit schema **significantly improves read performance** because Spark does not need to scan the entire data file to infer types.
+
+### 🔄 DataFrame API Operations
+DataFrame methods return a new DataFrame object, allowing operations to be **chained** together:
+
+```python
+# Chaining Selection, Filtering (Logical OR "|", Logical AND "&")
+bikes_df = df.select("ProductName", "Category", "ListPrice") \
+             .where((df["Category"] == "Mountain Bikes") | (df["Category"] == "Road Bikes"))
+
+# Grouping and Aggregating
+counts_df = df.select("ProductID", "Category").groupBy("Category").count()
+```
+*   *Alternative Select Syntax:* You can use a list bracket to select columns: `df["ProductID", "ListPrice"]`.
+
+### 💾 Saving Data & Partitioning (Optimization)
+
+#### 1. Saving to Parquet
+Parquet is a highly compressed, columnar storage format preferred for downstream analytical ingestion.
+```python
+bikes_df.write.mode("overwrite").parquet('Files/product_data/bikes.parquet')
 ```
 
-### 🔄 Transforming Data
+#### 2. Partitioning Output Files (`partitionBy`)
+Partitioning splits your dataset physically on disk into a hierarchical folder structure based on the values of one or more columns.
 ```python
-from pyspark.sql.functions import col, year, month, split
-
-# Adding new columns, casting types, splitting strings, and filtering rows
-transformed_df = df.withColumn("Year", year(col("OrderDate"))) \
-                    .withColumn("Month", month(col("OrderDate"))) \
-                    .withColumn("FirstName", split(col("CustomerName"), " ").getItem(0)) \
-                    .filter(col("Quantity") > 5)
+bikes_df.write.partitionBy("Category").mode("overwrite").parquet("Files/bike_data")
 ```
-
-### 💾 Writing Data (Saving to Delta Tables)
-```python
-# Write as a Managed Delta Table (automatically registers in Lakehouse catalog)
-transformed_df.write.format("delta") \
-    .mode("overwrite") \
-    .saveAsTable("dbo.processed_sales")
-```
-
----
-
-## 4. Spark SQL (Tables vs. Views)
-
-Spark SQL allows developers to query dataframes and tables using standard ANSI SQL.
-
-### 📊 Managed Tables vs. External Tables
-*   **Managed Tables:** Registered in the Lakehouse catalog. Both the data files (stored in `Tables/` directory) and metadata are managed by Fabric. Deleting the table **deletes both** metadata and the underlying Delta files.
-*   **External Tables:** Point to a folder location outside of the default `Tables/` path. Deleting the table **only deletes the metadata**; your data files remain intact in storage.
-
-### 👁️ Temporary Views vs. Global Temporary Views
-*   **Temporary View (Session-Scoped):**
-    *   Created using `df.createOrReplaceTempView("my_temp_view")`.
-    *   Only accessible within the active notebook session/Spark Context.
-    *   Automatically dropped when the notebook is closed or the Spark session idle-timeout kicks in.
-*   **Global Temporary View (Application-Scoped):**
-    *   Created using `df.createOrReplaceGlobalTempView("my_global_view")`.
-    *   Shared across different notebook sessions running on the *same Spark application/cluster*.
-    *   Must be queried with the prefix path `global_temp.my_global_view`.
-
----
-
-## 5. Visualizing Data in Spark Notebooks
-Fabric Spark Notebooks contain built-in charting engines. You can easily visualize dataframes without writing visualization code by using:
-1.  **The Chart View:** Converting a Spark Dataframe display output directly into a bar, line, scatter, or pie chart by clicking the **Chart** tab below a cell output.
-2.  **Native Code Visualization:** Using popular python charting libraries:
-    ```python
-    import matplotlib.pyplot as plt
-    import seaborn as sns
-
-    # Convert Spark DataFrame to Pandas for local visualization (small datasets only)
-    pandas_df = transformed_df.select("Year", "Quantity").toPandas()
-    
-    sns.lineplot(data=pandas_df, x="Year", y="Quantity")
-    plt.show()
+*   **Physical Folder Structure:** 
+    ```text
+    Files/bike_data/
+    ├── Category=Mountain Bikes/
+    │   └── part-00000.snappy.parquet
+    └── Category=Road Bikes/
+        └── part-00000.snappy.parquet
     ```
+*   > [!TIP]
+    > **Performance Optimization:** Partitioning eliminates unnecessary disk I/O. When a user runs a query with a filter (e.g., `WHERE Category = 'Road Bikes'`), Spark reads **only** the relevant folder on disk, completely skipping the rest.
+
+#### 3. Reading Partitioned Data
+*   **Reading a specific partition:**
+    ```python
+    road_bikes_df = spark.read.parquet('Files/bike_data/Category=Road Bikes')
+    ```
+*   > [!WARNING]
+    > **Column Omission:** When you load data from a specific partition folder directly, the partitioning column (`Category` in this case) is **omitted** from the resulting DataFrame schema, as its value is constant based on the folder path.
+
+---
+
+## 5. Working with Spark SQL
+
+Spark SQL enables querying data cataloged in the Spark Metastore using standard relational SQL expressions.
+
+### 🗄️ Relational Database Objects in the Spark Catalog
+The Spark catalog acts as a schema registry. You can register dataframes as relational objects:
+
+#### 1. Temporary Views
+*   **Command:** `df.createOrReplaceTempView("products_view")`
+*   **Lifecycle:** **Session-scoped**. Automatically destroyed when the notebook session closes, the Spark pool is shut down, or the session timeouts.
+
+#### 2. Managed Tables (HIGH YIELD)
+*   **Command:** `df.write.format("delta").saveAsTable("products")`
+*   **Format:** Preferred format is **Delta** (Delta Lake format), which brings ACID transactions, time-travel versioning, and streaming compatibility.
+*   **Storage Location:** Written directly inside the **`Tables/`** directory of the Lakehouse.
+*   *Behavior on Delete:* Deleting a managed table **deletes both the catalog metadata AND the underlying Delta files** on OneLake.
+
+#### 3. External Tables (HIGH YIELD)
+*   **Command:** Created using `spark.catalog.createExternalTable()`.
+*   **Storage Location:** Points to a folder path in external storage (typically the **`Files/`** folder of your Lakehouse).
+*   *Behavior on Delete:* Deleting an external table **ONLY deletes the metadata definition** from the Spark catalog; the raw data files remain untouched in OneLake.
+
+---
+
+## 6. Querying Data via Spark SQL API vs. Cell Magics
+
+You can query tables in the catalog in two different ways depending on your use case:
+
+### 🐍 1. Programmatic API (Returning a DataFrame)
+Use this within PySpark code blocks to select data, apply SQL filters, and output another DataFrame object for further processing.
+```python
+bikes_df = spark.sql("SELECT ProductID, ProductName, ListPrice FROM products WHERE Category IN ('Mountain Bikes', 'Road Bikes')")
+display(bikes_df)
+```
+
+### 📊 2. Cell Magic (Pure SQL Query)
+Use this in a notebook for quick, visual analysis of your catalog tables.
+```sql
+%%sql
+
+SELECT Category, COUNT(ProductID) AS ProductCount
+FROM products
+GROUP BY Category
+ORDER BY ProductCount DESC
+```
+*   The results are automatically rendered below the cell as a formatted table or interactive chart.
+
+---
+
+## 7. Data Visualization inside Spark Notebooks
+
+Visualizing data is crucial for exploratory data analysis (EDA). Fabric notebooks provide both codeless and code-based charting methods:
+
+### 🎛️ 1. Built-in Notebook UI Charts
+*   **How it works:** When displaying a DataFrame or running a SQL query, the output window displays a **Table** tab and a **Chart** tab below the code cell.
+*   **Usage:** You can visually configure charts (bar, line, pie, scatter) using a simple configuration sidebar directly in the UI without writing code.
+*   **Limitation:** Good for quick visual summaries but lacks complex customization options.
+
+### 🐍 2. Code-Based Visualization (Python Graphics Libraries)
+For fine-grained layout control, you can use standard Python plotting libraries like **Matplotlib** or **Seaborn**.
+
+#### 💡 The Pandas Conversion Constraint (HIGH YIELD)
+Spark DataFrames are distributed datasets across worker nodes, which graphics libraries cannot plot directly. 
+*   **Rule:** You **must** convert the Spark DataFrame to a localized Python **Pandas DataFrame** using the **`.toPandas()`** method before plotting it.
+*   *Warning:* Converting very large Spark DataFrames to Pandas can crash the driver (head node) because it pulls all distributed data into the single driver node's local memory. Aggregating/summarizing the data *before* calling `.toPandas()` is standard practice.
+
+#### Example Plotting Code:
+```python
+from matplotlib import pyplot as plt
+
+# 1. Query catalog data and convert to Pandas DataFrame
+data_pdf = spark.sql("SELECT Category, COUNT(ProductID) AS ProductCount FROM products GROUP BY Category").toPandas()
+
+# 2. Clear plot area and set figure dimensions
+plt.clf()
+fig = plt.figure(figsize=(12, 8))
+
+# 3. Build bar plot using Pandas columns
+plt.bar(x=data_pdf['Category'], height=data_pdf['ProductCount'], color='orange')
+
+# 4. Customize labels & grid properties
+plt.title('Product Counts by Category')
+plt.xlabel('Category')
+plt.ylabel('Products')
+plt.xticks(rotation=70)
+
+# 5. Render plot inline
+plt.show()
+```
