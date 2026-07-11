@@ -3,7 +3,7 @@
 *   **Exam Date:** August 11, 2026 · 10:30 AM · GEF Alexandria
 *   **Current Date:** July 11, 2026
 *   **Total Days Left:** 31 Days
-*   **🚨 Capacity Expiration Constraint:** Your active Azure Fabric Capacity ($200 credits) expires in **19 Days** (around July 29). We must complete all modules requiring hands-on exercises by this date.
+*   **🚨 Capacity Expiration Constraint:** Your active Azure Fabric Capacity ($200 credits) expires in **18 Days** (around July 29). We must complete all modules requiring hands-on exercises by **July 28**.
 
 ---
 
@@ -66,16 +66,16 @@ Below is the complete list of modules across all 5 official learning paths. Dupl
 *   **July 19 (Sun):** Study **M15:** Query a Microsoft Fabric data warehouse
 *   **July 20 (Mon):** Study **M16:** Monitor a Microsoft Fabric data warehouse
 *   **July 21 (Tue):** Study **M17:** Secure a Microsoft Fabric data warehouse *(Completes Path 3)*
-*   **July 22 (Wed):** Study **M19:** Get started with Real-Time Intelligence in Microsoft Fabric
-*   **July 23 (Thu):** Study **M20:** Create and manage an Eventhouse in Microsoft Fabric
-*   **July 24 (Fri):** Study **M21:** Ingest real-time data with Microsoft Fabric Eventstreams
+*   **July 22 (Wed):** Study **M19 & M20:** Get started with Real-Time Intelligence & Create Eventhouse
+*   **July 23 (Thu):** Study **M21:** Ingest real-time data with Microsoft Fabric Eventstreams
+*   **July 24 (Fri):** Study **M22:** Query real-time data in a Microsoft Fabric KQL database *(Completes Path 4)*
 
-### Week 3 (July 25 – July 29): KQL, Administration & Git Integration
-*   **July 25 (Sat):** Study **M22:** Query real-time data in a Microsoft Fabric KQL database *(Completes Path 4)*
-*   **July 26 (Sun):** Study **M24:** Administer Microsoft Fabric
-*   **July 27 (Mon):** Study **M25:** Manage Fabric capacity and performance
-*   **July 28 (Tue):** Study **M26:** Implement Git integration in Microsoft Fabric
-*   **July 29 (Wed):** Study **M27:** Implement deployment pipelines in Microsoft Fabric *(Completes Path 5! Capacity Expiration)*
+### Week 3 (July 25 – July 28): Administration & Git Integration
+*   **July 25 (Sat):** Study **M24:** Administer Microsoft Fabric
+*   **July 26 (Sun):** Study **M25:** Manage Fabric capacity and performance
+*   **July 27 (Mon):** Study **M26:** Implement Git integration in Microsoft Fabric
+*   **July 28 (Tue):** Study **M27:** Implement deployment pipelines in Microsoft Fabric *(Completes Path 5! All labs done)*
+*   **July 29 (Wed):** **Capacity Expiration Day.** Delete Azure capacity resources & clean workspace.
 
 ---
 
