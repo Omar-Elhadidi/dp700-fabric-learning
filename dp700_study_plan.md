@@ -59,7 +59,7 @@ Below is the complete list of modules across all 5 official learning paths. Dupl
 *   **July 10 (Fri):** Study **M9:** Organize and transform data in a Fabric lakehouse
 *   **July 11 (Sat):** Study **M10:** Optimize Delta Lake tables in a Fabric lakehouse
 *   **July 12 (Sun):** Study **M11:** Secure and monitor a Microsoft Fabric lakehouse
-*   **July 13 (Mon):** Catch-up / Buffer day for any incomplete Lakehouse exercises
+*   **July 13 (Mon):** Study **M4:** Work with real-time data in an Eventhouse (Completes Path 1)
 
 ### Week 2 (July 14 – July 20): Data Warehousing
 *   **July 14 (Tue):** Study **M12:** Introduction to data warehouses in Microsoft Fabric
