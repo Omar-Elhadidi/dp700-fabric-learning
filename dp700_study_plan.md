@@ -2,112 +2,94 @@
 
 *   **Exam Date:** August 11, 2026 · 10:30 AM · GEF Alexandria
 *   **Current Date:** July 11, 2026
-*   **Total Days Left:** 31 Days
-*   **🚨 Capacity Expiration Constraint:** Your active Azure Fabric Capacity ($200 credits) expires in **18 Days** (around July 29). We must complete all modules requiring hands-on exercises by **July 28**.
+*   **🚨 Highest Priority Constraint:** Active Azure Fabric Capacity ($200 credits) expires on **July 29**. All modules requiring hands-on labs must be completed and cleared by **July 28**.
+*   **🎯 Exam Prep Strategy:** Prioritize passing the exam over mastering deep Spark coding details. Focus on core architectural concepts, security, configurations, and administrative properties first. Leave complex PySpark syntax optimization for post-exam portfolio building.
 
 ---
 
 ## 📚 Master Module Map (27 Total / 22 Unique)
 
-Below is the complete list of modules across all 5 official learning paths. Duplicate modules are marked so you do not waste time repeating them.
-
-### Path 1: Ingest Data with Microsoft Fabric
-- [x] **M1:** Ingest data with Dataflows Gen2 *(Done)*
-- [x] **M2:** Orchestrate processes and data movement with Fabric pipelines *(Done)*
-- [x] **M3:** Use Apache Spark in Microsoft Fabric *(Done)*
-- [ ] **M4:** Work with real-time data in an Eventhouse
-
-### Path 2: Implement a Lakehouse with Microsoft Fabric
-- [ ] **M5:** Introduction to Microsoft Fabric lakehouses
+- [x] **M1:** Ingest data with Dataflows Gen2 `[Theory + Lab]` *(Done)*
+- [x] **M2:** Orchestrate processes and data movement with Fabric pipelines `[Theory + Lab]` *(Done)*
+- [x] **M3:** Use Apache Spark in Microsoft Fabric `[Theory + Lab]` *(Done)*
+- [ ] **M4:** Work with real-time data in an Eventhouse `[Theory + Lab]` (Theory: 1.0h, Lab: 1.5h)
+- [ ] **M5:** Introduction to Microsoft Fabric lakehouses `[Theory]` (Theory: 1.0h)
 - [x] **M6:** Use Apache Spark in Microsoft Fabric *(Duplicate of M3)*
 - [x] **M7:** Ingest data with Data Factory pipelines *(Duplicate of M2)*
 - [x] **M8:** Ingest data with Dataflows Gen2 *(Duplicate of M1)*
-- [ ] **M9:** Organize and transform data in a Fabric lakehouse
-- [ ] **M10:** Optimize Delta Lake tables in a Fabric lakehouse
-- [ ] **M11:** Secure and monitor a Microsoft Fabric lakehouse
-
-### Path 3: Implement a Data Warehouse with Microsoft Fabric
-- [ ] **M12:** Introduction to data warehouses in Microsoft Fabric
-- [ ] **M13:** Design a data warehouse in Microsoft Fabric
-- [ ] **M14:** Load data into a Microsoft Fabric data warehouse
-- [ ] **M15:** Query a Microsoft Fabric data warehouse
-- [ ] **M16:** Monitor a Microsoft Fabric data warehouse
-- [ ] **M17:** Secure a Microsoft Fabric data warehouse
+- [ ] **M9:** Organize and transform data in a Fabric lakehouse `[Theory + Lab]` (Theory: 1.0h, Lab: 1.5h)
+- [ ] **M10:** Optimize Delta Lake tables in a Fabric lakehouse `[Theory + Lab]` (Theory: 1.0h, Lab: 1.0h)
+- [ ] **M11:** Secure and monitor a Microsoft Fabric lakehouse `[Theory + Lab]` (Theory: 1.0h, Lab: 1.0h)
+- [ ] **M12:** Introduction to data warehouses in Microsoft Fabric `[Theory]` (Theory: 1.0h)
+- [ ] **M13:** Design a data warehouse in Microsoft Fabric `[Theory + Lab]` (Theory: 1.0h, Lab: 1.5h)
+- [ ] **M14:** Load data into a Microsoft Fabric data warehouse `[Theory + Lab]` (Theory: 1.0h, Lab: 1.5h)
+- [ ] **M15:** Query a Microsoft Fabric data warehouse `[Theory + Lab]` (Theory: 1.0h, Lab: 1.5h)
+- [ ] **M16:** Monitor a Microsoft Fabric data warehouse `[Theory + Lab]` (Theory: 1.0h, Lab: 1.0h)
+- [ ] **M17:** Secure a Microsoft Fabric data warehouse `[Theory + Lab]` (Theory: 1.0h, Lab: 1.0h)
 - [x] **M18:** Ingest data with Data Factory pipelines *(Duplicate of M2)*
-
-### Path 4: Implement Real-Time Intelligence with Microsoft Fabric
-- [ ] **M19:** Get started with Real-Time Intelligence in Microsoft Fabric
-- [ ] **M20:** Create and manage an Eventhouse in Microsoft Fabric
-- [ ] **M21:** Ingest real-time data with Microsoft Fabric Eventstreams
-- [ ] **M22:** Query real-time data in a Microsoft Fabric KQL database
+- [ ] **M19:** Get started with Real-Time Intelligence in Microsoft Fabric `[Theory]` (Theory: 1.0h)
+- [ ] **M20:** Create and manage an Eventhouse in Microsoft Fabric `[Theory + Lab]` (Theory: 1.0h, Lab: 1.0h)
+- [ ] **M21:** Ingest real-time data with Microsoft Fabric Eventstreams `[Theory + Lab]` (Theory: 1.0h, Lab: 1.5h)
+- [ ] **M22:** Query real-time data in a Microsoft Fabric KQL database `[Theory + Lab]` (Theory: 1.0h, Lab: 1.5h)
 - [x] **M23:** Load data with Dataflows Gen2 *(Duplicate of M1)*
-
-### Path 5: Manage a Microsoft Fabric Environment
-- [ ] **M24:** Administer Microsoft Fabric
-- [ ] **M25:** Manage Fabric capacity and performance
-- [ ] **M26:** Implement Git integration in Microsoft Fabric
-- [ ] **M27:** Implement deployment pipelines in Microsoft Fabric
+- [ ] **M24:** Administer Microsoft Fabric `[Theory]` (Theory: 1.5h)
+- [ ] **M25:** Manage Fabric capacity and performance `[Theory + Lab]` (Theory: 1.0h, Lab: 1.5h)
+- [ ] **M26:** Implement Git integration in Microsoft Fabric `[Theory + Lab]` (Theory: 1.0h, Lab: 1.0h)
+- [ ] **M27:** Implement deployment pipelines in Microsoft Fabric `[Theory + Lab]` (Theory: 1.0h, Lab: 1.0h)
 
 ---
 
-## 📅 Day-by-Day Execution Schedule (19 Remaining Unique Modules)
+## 📅 Phase 1: Hands-on Capacity Window (July 11 – July 29)
+*Aggressive but achievable schedule targeting 3–5 hours per day.*
 
-### Week 1 (July 11 – July 17): Lakehouse & Real-Time Data Ingestion
-*   **July 11 (Sat) [Today]:** Study **M5:** Introduction to Microsoft Fabric lakehouses
-*   **July 12 (Sun):** Study **M9:** Organize and transform data in a Fabric lakehouse
-*   **July 13 (Mon):** Study **M10:** Optimize Delta Lake tables in a Fabric lakehouse
-*   **July 14 (Tue):** Study **M11:** Secure and monitor a Microsoft Fabric lakehouse
-*   **July 15 (Wed):** Study **M4:** Work with real-time data in an Eventhouse *(Completes Paths 1 & 2)*
-*   **July 16 (Thu):** Study **M12:** Introduction to data warehouses in Microsoft Fabric
-*   **July 17 (Fri):** Study **M13:** Design a data warehouse in Microsoft Fabric
+### 🗺️ Week 1: July 11 – July 17 (Lakehouse Core & Eventhouses)
+- [ ] **July 11 (Sat):** Study **M5** `[Theory]` (1.0h) & **M9** `[Theory + Lab]` (2.5h)
+- [ ] **July 12 (Sun):** Study **M10** `[Theory + Lab]` (2.0h) & **M11** `[Theory + Lab]` (2.0h)
+- [ ] **July 13 (Mon):** 🛡️ **Catch-Up & Review Day 1** (Buffer for unfinished labs/notes)
+- [ ] **July 14 (Tue):** Study **M4** `[Theory + Lab]` (2.5h) *(Completes Path 1)*
+- [ ] **July 15 (Wed):** 🏁 **Checkpoint 1:** Review Path 1 & 2 study summaries + complete all Path 1/2 module assessments (2.0h)
+- [ ] **July 16 (Thu):** Study **M12** `[Theory]` (1.0h) & **M13** `[Theory + Lab]` (2.5h)
+- [ ] **July 17 (Fri):** Study **M14** `[Theory + Lab]` (2.5h)
 
-### Week 2 (July 18 – July 24): Data Warehousing & Real-Time Intelligence
-*   **July 18 (Sat):** Study **M14:** Load data into a Microsoft Fabric data warehouse
-*   **July 19 (Sun):** Study **M15:** Query a Microsoft Fabric data warehouse
-*   **July 20 (Mon):** Study **M16:** Monitor a Microsoft Fabric data warehouse
-*   **July 21 (Tue):** Study **M17:** Secure a Microsoft Fabric data warehouse *(Completes Path 3)*
-*   **July 22 (Wed):** Study **M19 & M20:** Get started with Real-Time Intelligence & Create Eventhouse
-*   **July 23 (Thu):** Study **M21:** Ingest real-time data with Microsoft Fabric Eventstreams
-*   **July 24 (Fri):** Study **M22:** Query real-time data in a Microsoft Fabric KQL database *(Completes Path 4)*
+### 🗺️ Week 2: July 18 – July 24 (Data Warehousing & Real-Time Intelligence)
+- [ ] **July 18 (Sat):** Study **M15** `[Theory + Lab]` (2.5h)
+- [ ] **July 19 (Sun):** Study **M16** `[Theory + Lab]` (2.0h) & **M17** `[Theory + Lab]` (2.0h) *(Completes Path 3)*
+- [ ] **July 20 (Mon):** 🛡️ **Catch-Up & Review Day 2** (Buffer for unfinished labs/notes)
+- [ ] **July 21 (Tue):** 🏁 **Checkpoint 2:** Review Path 3 study summaries + complete all Path 3 module assessments (2.0h)
+- [ ] **July 22 (Wed):** Study **M19** `[Theory]` (1.0h) & **M20** `[Theory + Lab]` (2.0h)
+- [ ] **July 23 (Thu):** Study **M21** `[Theory + Lab]` (2.5h)
+- [ ] **July 24 (Fri):** Study **M22** `[Theory + Lab]` (2.5h) *(Completes Path 4)*
 
-### Week 3 (July 25 – July 28): Administration & Git Integration
-*   **July 25 (Sat):** Study **M24:** Administer Microsoft Fabric
-*   **July 26 (Sun):** Study **M25:** Manage Fabric capacity and performance
-*   **July 27 (Mon):** Study **M26:** Implement Git integration in Microsoft Fabric
-*   **July 28 (Tue):** Study **M27:** Implement deployment pipelines in Microsoft Fabric *(Completes Path 5! All labs done)*
-*   **July 29 (Wed):** **Capacity Expiration Day.** Delete Azure capacity resources & clean workspace.
+### 🗺️ Week 3: July 25 – July 29 (Admin, Git Integration & Cleanup)
+- [ ] **July 25 (Sat):** 🏁 **Checkpoint 3:** Review Path 4 study summaries + complete all Path 4 module assessments (2.0h)
+- [ ] **July 26 (Sun):** Study **M24** `[Theory]` (1.5h) & **M25** `[Theory + Lab]` (2.5h)
+- [ ] **July 27 (Mon):** Study **M26** `[Theory + Lab]` (2.0h) & **M27** `[Theory + Lab]` (2.0h) *(Completes Path 5)*
+- [ ] **July 28 (Tue):** 🛡️ **Catch-Up & Review Day 3** (Final lab execution checks and git commits)
+- [ ] **July 29 (Wed):** 🚨 **Capacity Expiration & Deletion Day:** Delete all Azure/Fabric capacity items to ensure zero billing. Complete Checkpoint 4 (Path 5 reviews & assessments) (2.0h)
 
 ---
 
 ## 📅 Phase 2: Theory & Practice Exam Window (July 30 – August 10)
-**Goal:** Practice assessment drilling, weakness analysis, and concept lookups (no active capacity required).
+*No active Fabric capacity required. Focus purely on retrieval practice, diagnostics, and documentation lookup speed.*
 
-### Week 4 (July 30 – August 5): Mock Exam Drilling
-*   **July 30 (Thu):** **First Practice Assessment (Diagnostic).** Take the official free Microsoft practice test. Don't study beforehand. Identify your weak paths.
-*   **July 31 (Fri):** Deep-dive review of all questions you missed. Look up definitions in your study notes.
-*   **August 1 – 2 (Sat-Sun):** Weakness drilling: Re-read the Microsoft Learn pages for your lowest-scoring topics.
-*   **August 3 – 5 (Mon-Wed):** Review repository notes (`notes.md` in all folders). Take the Practice Assessment a 2nd time. Target: 75%+.
+### 🗺️ Week 4: July 30 – August 5 (Diagnostic Testing & Drill Phase)
+- [ ] **July 30 (Thu):** 📝 **Official Microsoft Practice Assessment - Run 1.** (Open-book allowed. **Target Score: 70%**).
+- [ ] **July 31 (Fri):** Drill weak topics exposed by Run 1. Re-read target sections in repository notes.
+- [ ] **August 1 (Sat):** Deep-dive review of security settings (RLS/CLS in Warehouse vs. Lakehouse).
+- [ ] **August 2 (Sun):** 🛡️ **Catch-Up / Mental Rest Day**
+- [ ] **August 3 (Mon):** 📝 **Official Microsoft Practice Assessment - Run 2.** (Timed. **Target Score: 80%**).
+- [ ] **August 4 (Tue):** Drill weak topics exposed by Run 2. Practice navigating Microsoft Learn document paths.
+- [ ] **August 5 (Wed):** Deep-dive review of performance optimization (V-Order, custom partitions, autotuning).
 
-### Week 5 (August 6 – August 10): Final Polish
-*   **August 6 (Thu):** Take the Practice Assessment a 3rd time. Target: 85%+.
-*   **August 7 (Fri):** Practice navigating the online Microsoft Learn documentation. (Since the exam is open-book, you must know how to search quickly under timer pressure).
-*   **August 8 – 9 (Sat-Sun):** Light review. Check your study plan checklist. Sleep well.
-*   **August 10 (Mon):** Relax. No heavy studying. Pack your ID card.
-*   **August 11 (Tue):** **EXAM DAY (10:30 AM at GEF Alexandria)**
+### 🗺️ Week 5: August 6 – August 10 (Target Scoring & Final Revision)
+- [ ] **August 6 (Thu):** Review Git integration vs. Deployment pipelines.
+- [ ] **August 7 (Fri):** 📝 **Official Microsoft Practice Assessment - Run 3.** (Timed, closed-book. **Target Score: 90%+**).
+- [ ] **August 8 (Sat):** 🛡️ **Catch-Up / Buffer Day**
+- [ ] **August 9 (Sun):** 📚 **Revision Day 1:** Complete review of all repository `notes.md` from Path 1 to Path 5.
+- [ ] **August 10 (Mon):** 📚 **Revision Day 2:** Focus on quick lookup methods in MS Learn and flashcarding configuration thresholds/defaults. Sleep early.
+- [ ] **August 11 (Tue):** 🏁 **EXAM DAY (10:30 AM at GEF Alexandria)**
 
 ---
 
 ## 📋 Daily Non-Negotiables
-These keep your habits consistent without burning you out:
-- [ ] **15-Min Upwork Mandate:** Send 2 high-quality proposals.
-- [ ] **Daily GitHub Commit:** Commit your study notes or screenshots (keeps the graph green).
-
----
-
-## 🚀 Post-Exam Phase: The Portfolio Project
-Once you pass the exam on August 11, you will build a project to show on Upwork/LinkedIn. 
-*(Note: You will need to spin up a new trial or pay for a few hours of Fabric capacity to build this).*
-
-*   **Bronze Layer:** Pipeline (Copy Activity) loading a raw CSV into a Lakehouse.
-*   **Silver Layer:** PySpark Notebook to clean data and save as Delta Tables.
-*   **Gold Layer:** Cross-workspace SQL query loading data into a Data Warehouse Star Schema, with Row-Level Security applied.
+- [ ] **Daily GitHub Commit:** Push your study notes or screenshots to keep your repository history green.
