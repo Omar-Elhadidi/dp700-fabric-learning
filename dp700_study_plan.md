@@ -100,7 +100,6 @@ Below is the complete list of modules across all 5 official learning paths. Dupl
 
 ## 📋 Daily Non-Negotiables
 These keep your habits consistent without burning you out:
-- [ ] **15-Min Upwork Mandate:** Send 2 high-quality proposals.
 - [ ] **Daily GitHub Commit:** Commit your study notes or screenshots (keeps the graph green).
 
 ---
