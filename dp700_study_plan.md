@@ -52,31 +52,30 @@ Below is the complete list of modules across all 5 official learning paths. Dupl
 
 ## 📅 Day-by-Day Execution Schedule (20 Remaining Unique Modules)
 
-### Week 1 (July 7 – July 13): Spark & Lakehouses
-*   **July 7 (Tue):** Study **M3:** Use Apache Spark in Microsoft Fabric (Theory)
-*   **July 8 (Wed):** Complete **M3 Exercise** (PySpark Notebook)
-*   **July 9 (Thu):** Study **M5:** Introduction to Microsoft Fabric lakehouses
-*   **July 10 (Fri):** Study **M9:** Organize and transform data in a Fabric lakehouse
-*   **July 11 (Sat):** Study **M10:** Optimize Delta Lake tables in a Fabric lakehouse
-*   **July 12 (Sun):** Study **M11:** Secure and monitor a Microsoft Fabric lakehouse
-*   **July 13 (Mon):** Study **M4:** Work with real-time data in an Eventhouse (Completes Path 1)
+### Week 1 (July 7 – July 13): Ingestion & Lakehouses
+*   **July 7 (Tue):** Study **M3:** Use Apache Spark in Microsoft Fabric (Theory) *(Done)*
+*   **July 8 (Wed):** Complete **M3 Exercise** (PySpark Notebook) *(Done)*
+*   **July 9 – 10:** Buffer / Rest
+*   **July 11 (Sat):** Study **M5:** Introduction to Microsoft Fabric lakehouses (Start Lakehouses)
+*   **July 12 (Sun):** Study **M9:** Organize and transform data in a Fabric lakehouse
+*   **July 13 (Mon):** Study **M10:** Optimize Delta Lake tables in a Fabric lakehouse
 
-### Week 2 (July 14 – July 20): Data Warehousing
-*   **July 14 (Tue):** Study **M12:** Introduction to data warehouses in Microsoft Fabric
-*   **July 15 (Wed):** Study **M13:** Design a data warehouse in Microsoft Fabric
-*   **July 16 (Thu):** Study **M14:** Load data into a Microsoft Fabric data warehouse
-*   **July 17 (Fri):** Study **M15:** Query a Microsoft Fabric data warehouse
-*   **July 18 (Sat):** Study **M16:** Monitor a Microsoft Fabric data warehouse
-*   **July 19 (Sun):** Study **M17:** Secure a Microsoft Fabric data warehouse
-*   **July 20 (Mon):** Catch-up / Buffer day for any Warehouse SQL exercises
+### Week 2 (July 14 – July 20): Lakehouse Security & Data Warehousing
+*   **July 14 (Tue):** Study **M11:** Secure and monitor a Microsoft Fabric lakehouse (Completes Path 2)
+*   **July 15 (Wed):** Study **M12:** Introduction to data warehouses in Microsoft Fabric
+*   **July 16 (Thu):** Study **M13:** Design a data warehouse in Microsoft Fabric
+*   **July 17 (Fri):** Study **M14:** Load data into a Microsoft Fabric data warehouse
+*   **July 18 (Sat):** Study **M15:** Query a Microsoft Fabric data warehouse
+*   **July 19 (Sun):** Study **M16:** Monitor a Microsoft Fabric data warehouse
+*   **July 20 (Mon):** Study **M17:** Secure a Microsoft Fabric data warehouse (Completes Path 3)
 
 ### Week 3 (July 21 – July 29): Real-Time Intelligence & Admin
-*   **July 21 (Tue):** Study **M19 & M20:** Real-Time Intelligence & Eventhouse creation
-*   **July 22 (Wed):** Study **M21 & M22:** Eventstreams ingestion & KQL database queries
+*   **July 21 (Tue):** Study **M4, M19 & M20:** Real-Time Intelligence, Eventhouse creation & management (Path 4 start)
+*   **July 22 (Wed):** Study **M21 & M22:** Eventstreams ingestion & KQL database queries (Completes Path 4)
 *   **July 23 (Thu):** Study **M24:** Administer Microsoft Fabric
 *   **July 24 (Fri):** Study **M25:** Manage Fabric capacity and performance
 *   **July 25 (Sat):** Study **M26:** Implement Git integration in Microsoft Fabric
-*   **July 26 (Sun):** Study **M27:** Implement deployment pipelines in Microsoft Fabric
+*   **July 26 (Sun):** Study **M27:** Implement deployment pipelines in Microsoft Fabric (Completes Path 5)
 *   **July 27 – 29 (Mon-Wed):** Buffer days. Re-run any failed exercises, confirm all screenshots are in Git, and clean up/delete your Azure Capacity resources.
 
 ---
