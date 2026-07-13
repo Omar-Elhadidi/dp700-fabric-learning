@@ -123,3 +123,11 @@ You can interact with your Lakehouse using two different UI views:
     *   *High Performance:* Avoids slow relational query conversion latency (unlike *DirectQuery Mode*) because it reads highly compressed, columnar Parquet files directly in memory.
     *   *Zero Storage Overhead:* No need to duplicate Lakehouse tables in Power BI cloud memory.
 *   **Semantic Model AI Grounding:** Creating clean semantic models with defined relationships and metrics enables **Copilot in Power BI** to generate visual charts and answer business questions in natural language.
+
+---
+
+## 6. Summary: Get Started with Lakehouses
+
+*   **Unified Storage:** Fabric Lakehouses eliminate data silos by combining flexible file storage (Files folder) and structured transactional analytics (Tables folder) in a single platform on OneLake.
+*   **Integrated Compute:** Apache Spark and SQL compute engines interact with the same physical delta-parquet files seamlessly.
+*   **Downstream AI & BI Enabler:** Clean schemas, descriptive column names, and defined semantic models directly enable **Fabric IQ data agents** and **Copilots** to reason over your data and query it accurately in natural language.
