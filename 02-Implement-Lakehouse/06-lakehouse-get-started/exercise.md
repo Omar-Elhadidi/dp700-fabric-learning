@@ -50,10 +50,10 @@ This exercise walks through creating a Lakehouse in Microsoft Fabric, ingesting 
 ## 5. Verification Screenshots
 
 ### Lakehouse Explorer (`06_lakehouse_explorer.png`)
-*   *What to capture:* Showing the `salesorders` table populated under the Tables directory and the `sales.csv` file inside the `Files/data/` folder.
+![Lakehouse Explorer and sales table](screenshots/06_lakehouse_explorer.png)
 
 ### SQL analytics endpoint query (`06_sql_endpoint.png`)
-*   *What to capture:* The SQL query editor displaying the Revenue aggregation query along with the completed result table below it.
+![SQL Query output](screenshots/06_sql_endpoint.png)
 
 ### Power Query Visual Query (`06_visual_query.png`)
-*   *What to capture:* The Power Query canvas showing the Grouped/Filtered query steps along with the resulting `LineItems` count preview.
+![Power Query visual grouping](screenshots/06_visual_query.png)
