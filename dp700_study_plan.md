@@ -1,9 +1,15 @@
 # 🚀 Microsoft Fabric Data Engineer (DP-700) Study Plan
 
 *   **Exam Date:** August 11, 2026 · 10:30 AM · GEF Alexandria
-*   **Current Date:** July 11, 2026
-*   **Total Days Left:** 31 Days
+*   **Current Date:** July 14, 2026
+*   **Total Days Left:** 28 Days
 *   **🚨 Highest Priority Constraint:** Active Azure Fabric Capacity ($200 credits) expires on **July 29**. All modules requiring hands-on labs must be completed and cleared by **July 28**.
+*   **🏢 DEPI Microsoft Data Engineer Class Schedule (Starts July 17):**
+    *   *Saturdays (Physical - Alexandria):* 1:00 PM – 4:00 PM
+    *   *Tuesdays (Online):* 7:00 PM – 10:00 PM
+    *   *Wednesdays (Online):* 7:00 PM – 10:00 PM
+    *   *Fridays (Online):* 7:00 PM – 10:00 PM
+    *   *Study Rule:* Complete daily Fabric study modules *before* class times on these days to avoid overload.
 *   **🎯 Exam Prep Strategy:** Prioritize passing the exam over mastering deep Spark coding details. Focus on core architectural concepts, security, configurations, and administrative properties first. Leave complex PySpark syntax optimization for post-exam portfolio building.
 
 ---
