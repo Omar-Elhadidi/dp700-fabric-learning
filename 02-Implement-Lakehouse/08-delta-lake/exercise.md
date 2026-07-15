@@ -31,6 +31,8 @@ This hands-on exercise explores Delta Lake capabilities inside Microsoft Fabric 
     ```python
     df.write.format("delta").saveAsTable("dbo.products_table")
     ```
+    *   *Verification Output:*
+        ![Delta table created under Tables folder](screenshots/08_delta_creation.png)
 
 ---
 
@@ -59,6 +61,8 @@ This hands-on exercise explores Delta Lake capabilities inside Microsoft Fabric 
     WHERE o.Category = 'Mountain Bikes'
     ORDER BY o.ProductName;
     ```
+    *   *Verification Output (Original vs. Updated prices comparison):*
+        ![Version comparison SQL query](screenshots/08_time_travel.png)
 
 ---
 
@@ -117,6 +121,8 @@ This hands-on exercise explores Delta Lake capabilities inside Microsoft Fabric 
     %%sql
     SELECT * FROM dbo.IotDeviceData;
     ```
+    *   *Verification Output (IoT device records streamed in real-time):*
+        ![Stream queries on IotDeviceData Delta table](screenshots/08_iot_streaming.png)
 4.  Write more data to the streaming directory and re-query the table:
     ```python
     more_data = '''{"device":"Dev1","status":"ok"}
