@@ -12,6 +12,8 @@ This hands-on exercise builds a full Bronze → Silver → Gold medallion archit
 4.  Extract the 3 files: `2019.csv`, `2020.csv`, `2021.csv`.
 5.  In the Explorer pane, create a **New subfolder** under `Files/` named **`bronze`**.
 6.  Upload all 3 CSV files into `Files/bronze/`.
+    *   *Verification Output (Uploaded source CSVs):*
+        ![Bronze layer files](screenshots/11_bronze_layer.png)
 
 ---
 
@@ -148,6 +150,8 @@ FROM dbo.sales_silver
 GROUP BY CustomerName
 ORDER BY TotalQuantity DESC
 ```
+*   *Verification Output (SQL query results showing year sales totals):*
+    ![Silver layer SQL query](screenshots/11_silver_query.png)
 
 ---
 
@@ -425,6 +429,8 @@ deltaTable.alias('gold') \
   ) \
   .execute()
 ```
+*   *Verification Output (Gold tables created in Explorer):*
+    ![Gold layer tables](screenshots/11_gold_tables.png)
 
 ---
 
@@ -435,6 +441,8 @@ deltaTable.alias('gold') \
 3.  Name it **`Sales_Gold`**.
 4.  Select the 4 gold tables: `dimdate_gold`, `dimcustomer_gold`, `dimproduct_gold`, `factsales_gold`.
 5.  Define relationships between fact and dimension tables in the model designer.
+    *   *Verification Output (Tables loaded into model canvas):*
+        ![Semantic model relationships](screenshots/11_semantic_model.png)
 
 ---
 
