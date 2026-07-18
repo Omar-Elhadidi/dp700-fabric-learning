@@ -1,8 +1,8 @@
 # 🚀 Microsoft Fabric Data Engineer (DP-700) Study Plan
 
 *   **Exam Date:** August 11, 2026 · 10:30 AM · GEF Alexandria
-*   **Current Date:** July 14, 2026
-*   **Total Days Left:** 28 Days
+*   **Current Date:** July 18, 2026
+*   **Total Days Left:** 24 Days
 *   **🚨 Highest Priority Constraint:** Active Azure Fabric Capacity ($200 credits) expires on **July 29**. All modules requiring hands-on labs must be completed and cleared by **July 28**.
 *   **🏢 DEPI Microsoft Data Engineer Class Schedule (Starts July 17):**
     *   *Saturdays (Physical - Alexandria):* 1:00 PM – 4:00 PM
@@ -25,13 +25,13 @@ Below is the complete list of modules across all 5 official learning paths on Mi
 - [ ] **M4:** Work with real-time data in an Eventhouse `[Theory + Lab]` (Theory: 1.0h, Lab: 1.5h)
 
 ### Path 2: Implement a Lakehouse with Microsoft Fabric (7 Modules / 4 Unique / 3 Duplicates)
-- [ ] **M5:** Introduction to end-to-end analytics using Microsoft Fabric `[Theory]` (Theory: 1.0h)
-- [ ] **M6:** Get started with lakehouses in Microsoft Fabric `[Theory + Lab]` (Theory: 1.0h, Lab: 1.0h)
+- [x] **M5:** Introduction to end-to-end analytics using Microsoft Fabric `[Theory]` *(Done)*
+- [x] **M6:** Get started with lakehouses in Microsoft Fabric `[Theory + Lab]` *(Done)*
 - [x] **M7:** Use Apache Spark in Microsoft Fabric *(Duplicate of M3)*
-- [ ] **M8:** Work with Delta Lake tables in Microsoft Fabric `[Theory + Lab]` (Theory: 1.0h, Lab: 1.5h)
+- [x] **M8:** Work with Delta Lake tables in Microsoft Fabric `[Theory + Lab]` *(Done)*
 - [x] **M9:** Ingest data with Dataflows Gen2 in Microsoft Fabric *(Duplicate of M1)*
 - [x] **M10:** Orchestrate processes and data movement with Microsoft Fabric *(Duplicate of M2)*
-- [ ] **M11:** Organize a Fabric lakehouse using medallion architecture design `[Theory + Lab]` (Theory: 1.0h, Lab: 1.5h)
+- [/] **M11:** Organize a Fabric lakehouse using medallion architecture design `[Theory + Lab]` *(Theory & Exercise Prep Done)*
 
 ### Path 3: Implement a Data Warehouse with Microsoft Fabric (7 Modules / 5 Unique / 2 Duplicates)
 - [ ] **M12:** Get started with data warehouses in Microsoft Fabric `[Theory]` (Theory: 1.0h)
@@ -60,29 +60,27 @@ Below is the complete list of modules across all 5 official learning paths on Mi
 ## 📅 Phase 1: Hands-on Capacity Window (July 11 – July 29)
 *Aggressive but achievable schedule targeting 3–5 hours per day.*
 
-### 🗺️ Week 1: July 11 – July 17 (Lakehouse Core Ingestion)
-- [ ] **July 11 (Sat) [Today]:** Study **M5** `[Theory]` (1.0h)
-- [ ] **July 12 (Sun):** Study **M6** `[Theory + Lab]` (2.0h)
-- [ ] **July 13 (Mon):** 🛡️ **Catch-Up & Review Day 1** (Buffer for unfinished labs/notes)
-- [ ] **July 14 (Tue):** Study **M8** `[Theory + Lab]` (2.5h)
-- [ ] **July 15 (Wed):** Study **M11** `[Theory + Lab]` (2.5h)
-- [ ] **July 16 (Thu):** Study **M4** `[Theory + Lab]` (2.5h) *(Completes Paths 1 & 2)*
-- [ ] **July 17 (Fri):** 🏁 **Checkpoint 1:** Review Path 1 & 2 summaries + complete all Path 1/2 module assessments (2.0h)
+### 🗺️ Week 1: July 11 – July 17 (Lakehouse Core Ingestion - COMPLETED)
+- [x] **July 11 (Sat):** Study **M5** `[Theory]` *(Done)*
+- [x] **Job 12 (Sun):** Study **M6** `[Theory + Lab]` *(Done)*
+- [x] **July 13 (Mon):** 🛡️ **Catch-Up & Review Day 1** *(Done)*
+- [x] **July 14 (Tue):** Study **M8** `[Theory + Lab]` *(Done)*
+- [x] **July 15 (Wed):** Study **M11** `[Theory + Lab]` *(Theory & Exercise Prep Done)*
 
-### 🗺️ Week 2: July 18 – July 24 (Data Warehousing & Real-Time Intelligence)
-- [ ] **July 18 (Sat):** Study **M12** `[Theory]` (1.0h)
-- [ ] **July 19 (Sun):** Study **M13** `[Theory + Lab]` (2.5h)
-- [ ] **July 20 (Mon):** 🛡️ **Catch-Up & Review Day 2** (Buffer for unfinished labs/notes)
+### 🗺️ Week 2: July 18 – July 24 (Real-Time Intelligence & Data Warehousing)
+- [/] **July 18 (Sat) [Today]:** Study **M4** `[Theory + Lab]` (2.5h) *(Completes Paths 1 & 2)*
+- [ ] **July 19 (Sun):** Study **M12** `[Theory]` (1.0h) & **M13** `[Theory + Lab]` (2.5h)
+- [ ] **July 20 (Mon):** 🛡️ **Catch-Up & Review Day 2** (Complete M11 Lab + buffer)
 - [ ] **July 21 (Tue):** Study **M14** `[Theory + Lab]` (2.5h)
 - [ ] **July 22 (Wed):** Study **M15** `[Theory + Lab]` (2.0h) & **M16** `[Theory + Lab]` (2.0h)
-- [ ] **July 23 (Thu):** 🏁 **Checkpoint 2:** Review Path 3 summaries + complete all Path 3 module assessments (2.0h)
-- [ ] **July 24 (Fri):** Study **M19** `[Theory]` (1.0h)
+- [ ] **July 23 (Thu):** 🏁 **Checkpoint 1 & 2:** Review Paths 1, 2, & 3 summaries + complete assessments (3.0h)
+- [ ] **July 24 (Fri):** Study **M19** `[Theory]` (1.0h) & **M20** `[Theory + Lab]` (2.0h)
 
 ### 🗺️ Week 3: July 25 – July 29 (Real-Time KQL, Admin & Git Integration)
-- [ ] **July 25 (Sat):** Study **M20** `[Theory + Lab]` (2.0h)
-- [ ] **July 26 (Sun):** Study **M21** `[Theory + Lab]` (2.5h) & **M22** `[Theory + Lab]` (2.5h) *(Completes Path 4)*
-- [ ] **July 27 (Mon):** Study **M24** `[Theory]` (1.5h) & **M25** `[Theory + Lab]` (2.0h)
-- [ ] **July 28 (Tue):** Study **M26** `[Theory + Lab]` (2.0h) & **M27** `[Theory + Lab]` (2.0h) *(Completes Path 5)*
+- [ ] **July 25 (Sat):** Study **M21** `[Theory + Lab]` (2.5h) & **M22** `[Theory + Lab]` (2.5h) *(Completes Path 4)*
+- [ ] **July 26 (Sun):** Study **M24** `[Theory]` (1.5h) & **M25** `[Theory + Lab]` (2.0h)
+- [ ] **July 27 (Mon):** Study **M26** `[Theory + Lab]` (2.0h) & **M27** `[Theory + Lab]` (2.0h) *(Completes Path 5)*
+- [ ] **July 28 (Tue):** 🛡️ **Final Verification Buffer** (All capacity-dependent tests verified)
 - [ ] **July 29 (Wed):** 🚨 **Capacity Expiration & Deletion Day:** Delete all capacity items + complete checkpoints for Paths 4 & 5.
 
 ---
