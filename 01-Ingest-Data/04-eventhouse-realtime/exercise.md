@@ -7,6 +7,8 @@ This hands-on exercise explores real-time analytics inside Microsoft Fabric usin
 ## 1. Setup & Sample Eventhouse Ingestion
 
 1. Navigate to the **Real-Time Intelligence** workload in Fabric.
+   *   *Verification Output (Workload Selection screen):*
+       ![Real-Time Intelligence workload options](screenshots/04_workload_selection.png)
 2. Select the **Explore Real-Time Intelligence Sample** tile. 
 3. This automatically provisions:
    * An Eventhouse named **`RTISample`**
@@ -14,7 +16,7 @@ This hands-on exercise explores real-time analytics inside Microsoft Fabric usin
    * A populated table named **`Bikestream`**
    * An attached default KQL queryset
 
-*   *Verification Output:*
+*   *Verification Output (Eventhouse and table created):*
     ![RTISample Eventhouse created and Bikestream table loaded](screenshots/04_rtisample_eventhouse.png)
 
 ---

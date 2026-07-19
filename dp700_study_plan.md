@@ -31,7 +31,7 @@ Below is the complete list of modules across all 5 official learning paths on Mi
 - [x] **M8:** Work with Delta Lake tables in Microsoft Fabric `[Theory + Lab]` *(Done)*
 - [x] **M9:** Ingest data with Dataflows Gen2 in Microsoft Fabric *(Duplicate of M1)*
 - [x] **M10:** Orchestrate processes and data movement with Microsoft Fabric *(Duplicate of M2)*
-- [/] **M11:** Organize a Fabric lakehouse using medallion architecture design `[Theory + Lab]` *(Theory & Exercise Prep Done)*
+- [x] **M11:** Organize a Fabric lakehouse using medallion architecture design `[Theory + Lab]` *(Done)*
 
 ### Path 3: Implement a Data Warehouse with Microsoft Fabric (7 Modules / 5 Unique / 2 Duplicates)
 - [ ] **M12:** Get started with data warehouses in Microsoft Fabric `[Theory]` (Theory: 1.0h)
@@ -62,10 +62,10 @@ Below is the complete list of modules across all 5 official learning paths on Mi
 
 ### 🗺️ Week 1: July 11 – July 17 (Lakehouse Core Ingestion - COMPLETED)
 - [x] **July 11 (Sat):** Study **M5** `[Theory]` *(Done)*
-- [x] **Job 12 (Sun):** Study **M6** `[Theory + Lab]` *(Done)*
+- [x] **July 12 (Sun):** Study **M6** `[Theory + Lab]` *(Done)*
 - [x] **July 13 (Mon):** 🛡️ **Catch-Up & Review Day 1** *(Done)*
 - [x] **July 14 (Tue):** Study **M8** `[Theory + Lab]` *(Done)*
-- [x] **July 15 (Wed):** Study **M11** `[Theory + Lab]` *(Theory & Exercise Prep Done)*
+- [x] **July 15-18:** Study **M11** `[Theory + Lab]` *(Done — Lab completed July 18)*
 
 ### 🗺️ Week 2: July 18 – July 24 (Real-Time Intelligence & Data Warehousing)
 - [/] **July 18 (Sat) [Today]:** Study **M4** `[Theory + Lab]` (2.5h) *(Completes Paths 1 & 2)*
