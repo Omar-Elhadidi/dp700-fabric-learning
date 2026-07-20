@@ -3,7 +3,7 @@
 *   **Exam Date:** August 11, 2026 · 10:30 AM · GEF Alexandria
 *   **Current Date:** July 20, 2026
 *   **Total Days Left:** 22 Days
-*   **Progress:** 8 / 21 Unique Modules Completed (13 / 27 Total Modules completed)
+*   **Progress:** 8 / 21 Unique Modules Completed (13 / 26 Total Modules completed counting auto-done)
 *   **🚨 Highest Priority Constraint:** Active Azure Fabric Capacity ($200 credits) expires on **July 29**. All modules requiring hands-on labs must be completed and cleared by **July 28**.
 *   **🏢 DEPI Microsoft Data Engineer Class Schedule (Starts July 17):**
     *   *Saturdays (Physical - Alexandria):* 1:00 PM – 4:00 PM
@@ -15,42 +15,39 @@
 
 ---
 
-## 📚 Master Module Map (27 Total / 21 Unique)
+## 📚 Master Module Map (M1 - M26)
 
-Below is the complete list of modules across all 5 official learning paths on Microsoft Learn, showing duplicates clearly.
-
-### Path 1: Ingest Data with Microsoft Fabric (4 Modules / 4 Unique - COMPLETED 🎉)
+### Path 1: Ingest Data with Microsoft Fabric
 - [x] **M1:** Ingest data with Dataflows Gen2 in Microsoft Fabric `[Theory + Lab]` *(Done)*
 - [x] **M2:** Orchestrate processes and data movement with Microsoft Fabric `[Theory + Lab]` *(Done)*
 - [x] **M3:** Use Apache Spark in Microsoft Fabric `[Theory + Lab]` *(Done)*
-- [x] **M4:** Work with real-time data in an Eventhouse `[Theory + Lab]` *(Done — Completes Path 1!)*
 
-### Path 2: Implement a Lakehouse with Microsoft Fabric (7 Modules / 4 Unique / 3 Duplicates - COMPLETED 🎉)
-- [x] **M5:** Introduction to end-to-end analytics using Microsoft Fabric `[Theory]` *(Done)*
-- [x] **M6:** Get started with lakehouses in Microsoft Fabric `[Theory + Lab]` *(Done)*
-- [x] **M7:** Use Apache Spark in Microsoft Fabric *(Duplicate of M3)*
-- [x] **M8:** Work with Delta Lake tables in Microsoft Fabric `[Theory + Lab]` *(Done)*
-- [x] **M9:** Ingest data with Dataflows Gen2 in Microsoft Fabric *(Duplicate of M1)*
-- [x] **M10:** Orchestrate processes and data movement with Microsoft Fabric *(Duplicate of M2)*
-- [x] **M11:** Organize a Fabric lakehouse using medallion architecture design `[Theory + Lab]` *(Done — Completes Path 2!)*
+### Path 2: Implement a Lakehouse with Microsoft Fabric
+- [x] **M4:** Introduction to end-to-end analytics using Microsoft Fabric `[Theory]` *(Done)*
+- [x] **M5:** Get started with lakehouses in Microsoft Fabric `[Theory + Lab]` *(Done)*
+- [x] **M6:** Use Apache Spark in Microsoft Fabric *(Duplicate of M3 - Auto Done)*
+- [x] **M7:** Work with Delta Lake tables in Microsoft Fabric `[Theory + Lab]` *(Done)*
+- [x] **M8:** Ingest data with Dataflows Gen2 in Microsoft Fabric *(Duplicate of M1 - Auto Done)*
+- [x] **M9:** Orchestrate processes and data movement with Microsoft Fabric *(Duplicate of M2 - Auto Done)*
+- [x] **M10:** Organize a Fabric lakehouse using medallion architecture design `[Theory + Lab]` *(Done)*
 
-### Path 3: Implement Real-Time Intelligence with Microsoft Fabric (5 Modules / 4 Unique / 1 Duplicate)
-- [ ] **M19:** Get started with Real-Time Intelligence in Microsoft Fabric `[Theory]`
-- [ ] **M20:** Use Eventstream in Microsoft Fabric `[Theory + Lab]`
-- [x] **M4:** Work with real-time data in an Eventhouse in Microsoft Fabric *(Duplicate - Done in Path 1)*
-- [ ] **M21:** Create Real-Time Dashboards with Microsoft Fabric `[Theory + Lab]`
-- [ ] **M22:** Use Activator in Microsoft Fabric `[Theory + Lab]`
+### Path 3: Implement Real-Time Intelligence with Microsoft Fabric
+- [ ] **M11:** Get started with Real-Time Intelligence in Microsoft Fabric `[Theory]`
+- [ ] **M12:** Use Eventstream in Microsoft Fabric `[Theory + Lab]`
+- [x] **M13:** Work with real-time data in an Eventhouse in Microsoft Fabric `[Theory + Lab]` *(Done previously)*
+- [ ] **M14:** Create Real-Time Dashboards with Microsoft Fabric `[Theory + Lab]`
+- [ ] **M15:** Use Activator in Microsoft Fabric `[Theory + Lab]`
 
-### Path 4: Implement a Data Warehouse with Microsoft Fabric (7 Modules / 5 Unique / 2 Duplicates)
-- [ ] **M12:** Get started with data warehouses in Microsoft Fabric `[Theory]`
-- [ ] **M13:** Load data into a Microsoft Fabric data warehouse `[Theory + Lab]`
-- [ ] **M14:** Query a Microsoft Fabric data warehouse `[Theory + Lab]`
-- [ ] **M15:** Monitor a Microsoft Fabric data warehouse `[Theory + Lab]`
-- [ ] **M16:** Secure a Microsoft Fabric data warehouse `[Theory + Lab]`
-- [x] **M17:** Ingest data with Dataflows Gen2 in Microsoft Fabric *(Duplicate of M1)*
-- [x] **M18:** Orchestrate processes and data movement with Microsoft Fabric *(Duplicate of M2)*
+### Path 4: Implement a Data Warehouse with Microsoft Fabric
+- [ ] **M16:** Get started with data warehouses in Microsoft Fabric `[Theory]`
+- [ ] **M17:** Load data into a Microsoft Fabric data warehouse `[Theory + Lab]`
+- [ ] **M18:** Query a Microsoft Fabric data warehouse `[Theory + Lab]`
+- [ ] **M19:** Monitor a Microsoft Fabric data warehouse `[Theory + Lab]`
+- [ ] **M20:** Secure a Microsoft Fabric data warehouse `[Theory + Lab]`
+- [x] **M21:** Ingest data with Dataflows Gen2 in Microsoft Fabric *(Duplicate of M1 - Auto Done)*
+- [x] **M22:** Orchestrate processes and data movement with Microsoft Fabric *(Duplicate of M2 - Auto Done)*
 
-### Path 5: Manage a Microsoft Fabric Environment (4 Modules / 4 Unique)
+### Path 5: Manage a Microsoft Fabric Environment
 - [ ] **M23:** Implement Continuous Integration and Continuous Delivery (CI/CD) in Microsoft Fabric `[Theory + Lab]`
 - [ ] **M24:** Monitor Activities in Microsoft Fabric `[Theory + Lab]`
 - [ ] **M25:** Administer a Microsoft Fabric Environment `[Theory]`
@@ -62,19 +59,19 @@ Below is the complete list of modules across all 5 official learning paths on Mi
 *Aggressive but achievable schedule targeting 3–5 hours per day.*
 
 ### 🗺️ Week 1: July 11 – July 17 (Lakehouse Core Ingestion - COMPLETED)
-- [x] **July 11 (Sat):** Study **M5** `[Theory]` *(Done)*
-- [x] **July 12 (Sun):** Study **M6** `[Theory + Lab]` *(Done)*
+- [x] **July 11 (Sat):** Study **M4** `[Theory]` *(Done)*
+- [x] **July 12 (Sun):** Study **M5** `[Theory + Lab]` *(Done)*
 - [x] **July 13 (Mon):** 🛡️ **Catch-Up & Review Day 1** *(Done)*
-- [x] **July 14 (Tue):** Study **M8** `[Theory + Lab]` *(Done)*
-- [x] **July 15-18:** Study **M11** `[Theory + Lab]` *(Done — Lab completed July 18)*
+- [x] **July 14 (Tue):** Study **M7** `[Theory + Lab]` *(Done)*
+- [x] **July 15-18:** Study **M10** `[Theory + Lab]` *(Done)*
 
 ### 🗺️ Week 2: July 18 – July 24 (Real-Time Intelligence & Data Warehousing)
-- [x] **July 18-19:** Study **M4** `[Theory + Lab]` *(Done)*
-- [ ] **July 20 (Mon) [Today]:** Study **M19** `[Theory]` & **M20** `[Theory + Lab]`
-- [ ] **July 21 (Tue):** Study **M21** `[Theory + Lab]` & **M22** `[Theory + Lab]` *(Completes Path 3)*
-- [ ] **July 22 (Wed):** Study **M12** `[Theory]` & **M13** `[Theory + Lab]`
-- [ ] **July 23 (Thu):** Study **M14** `[Theory + Lab]` & **M15** `[Theory + Lab]`
-- [ ] **July 24 (Fri):** Study **M16** `[Theory + Lab]` *(Completes Path 4)* & Review Path 3/4 summaries
+- [x] **July 18-19:** Study **M13** `[Theory + Lab]` *(Done - Eventhouse)*
+- [ ] **July 20 (Mon) [Today]:** Study **M11** `[Theory]` & **M12** `[Theory + Lab]`
+- [ ] **July 21 (Tue):** Study **M14** `[Theory + Lab]` & **M15** `[Theory + Lab]` *(Completes Path 3)*
+- [ ] **July 22 (Wed):** Study **M16** `[Theory]` & **M17** `[Theory + Lab]`
+- [ ] **July 23 (Thu):** Study **M18** `[Theory + Lab]` & **M19** `[Theory + Lab]`
+- [ ] **July 24 (Fri):** Study **M20** `[Theory + Lab]` *(Completes Path 4)* & Review Path 3/4 summaries
 
 ### 🗺️ Week 3: July 25 – July 29 (Admin & Git Integration, Checkpoints)
 - [ ] **July 25 (Sat):** 🏁 **Checkpoint 1, 2, & 3:** Complete Microsoft Learn assessments
