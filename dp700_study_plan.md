@@ -15,14 +15,6 @@
 
 ---
 
-## 📺 YouTube Study Resources
-*Use these videos to reinforce concepts and prepare for the exam, especially during your revision phase.*
-- [ ] **Data with Baraa:** Review his Data Engineering tutorials to solidify core concepts (as you previously mentioned).
-- [ ] **DP-700 Exam Full Course (Aleksi Partanen):** 11-hour comprehensive Microsoft Fabric Data Engineer crash course. *(Highly recommended for Phase 2 Revision)*
-- [ ] **Get Certified: Fabric Data Engineer (Microsoft Reactor):** 1-hour accelerated DP-700 overview.
-
----
-
 ## 📚 Master Module Map (M1 - M26)
 
 ### Path 1: Ingest Data with Microsoft Fabric
@@ -40,7 +32,7 @@
 - [x] **M10:** Organize a Fabric lakehouse using medallion architecture design `[Theory + Lab]` *(Done)*
 
 ### Path 3: Implement Real-Time Intelligence with Microsoft Fabric
-- [ ] **M11:** Get started with Real-Time Intelligence in Microsoft Fabric `[Theory]`
+- [x] **M11:** Get started with Real-Time Intelligence in Microsoft Fabric `[Theory]` *(Done)*
 - [ ] **M12:** Use Eventstream in Microsoft Fabric `[Theory + Lab]`
 - [x] **M13:** Work with real-time data in an Eventhouse in Microsoft Fabric `[Theory + Lab]` *(Done previously)*
 - [ ] **M14:** Create Real-Time Dashboards with Microsoft Fabric `[Theory + Lab]`
@@ -75,7 +67,7 @@
 
 ### 🗺️ Week 2: July 18 – July 24 (Real-Time Intelligence & Data Warehousing)
 - [x] **July 18-19:** Study **M13** `[Theory + Lab]` *(Done - Eventhouse)*
-- [ ] **July 20 (Mon) [Today]:** Study **M11** `[Theory]` & **M12** `[Theory + Lab]`
+- [/] **July 20 (Mon) [Today]:** Study **M11** `[Theory]` *(Done)* & **M12** `[Theory + Lab]`
 - [ ] **July 21 (Tue):** Study **M14** `[Theory + Lab]` & **M15** `[Theory + Lab]` *(Completes Path 3)*
 - [ ] **July 22 (Wed):** Study **M16** `[Theory]` & **M17** `[Theory + Lab]`
 - [ ] **July 23 (Thu):** Study **M18** `[Theory + Lab]` & **M19** `[Theory + Lab]`
