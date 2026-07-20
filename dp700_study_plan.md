@@ -1,8 +1,9 @@
 # 🚀 Microsoft Fabric Data Engineer (DP-700) Study Plan
 
 *   **Exam Date:** August 11, 2026 · 10:30 AM · GEF Alexandria
-*   **Current Date:** July 18, 2026
-*   **Total Days Left:** 24 Days
+*   **Current Date:** July 20, 2026
+*   **Total Days Left:** 22 Days
+*   **Progress:** 8 / 21 Unique Modules Completed (13 / 27 Total Modules completed)
 *   **🚨 Highest Priority Constraint:** Active Azure Fabric Capacity ($200 credits) expires on **July 29**. All modules requiring hands-on labs must be completed and cleared by **July 28**.
 *   **🏢 DEPI Microsoft Data Engineer Class Schedule (Starts July 17):**
     *   *Saturdays (Physical - Alexandria):* 1:00 PM – 4:00 PM
@@ -18,20 +19,20 @@
 
 Below is the complete list of modules across all 5 official learning paths on Microsoft Learn, showing duplicates clearly.
 
-### Path 1: Ingest Data with Microsoft Fabric (4 Modules / 4 Unique)
+### Path 1: Ingest Data with Microsoft Fabric (4 Modules / 4 Unique - COMPLETED 🎉)
 - [x] **M1:** Ingest data with Dataflows Gen2 in Microsoft Fabric `[Theory + Lab]` *(Done)*
 - [x] **M2:** Orchestrate processes and data movement with Microsoft Fabric `[Theory + Lab]` *(Done)*
 - [x] **M3:** Use Apache Spark in Microsoft Fabric `[Theory + Lab]` *(Done)*
-- [x] **M4:** Work with real-time data in an Eventhouse `[Theory + Lab]` *(Done — Completes Paths 1 & 2!)*
+- [x] **M4:** Work with real-time data in an Eventhouse `[Theory + Lab]` *(Done — Completes Path 1!)*
 
-### Path 2: Implement a Lakehouse with Microsoft Fabric (7 Modules / 4 Unique / 3 Duplicates)
+### Path 2: Implement a Lakehouse with Microsoft Fabric (7 Modules / 4 Unique / 3 Duplicates - COMPLETED 🎉)
 - [x] **M5:** Introduction to end-to-end analytics using Microsoft Fabric `[Theory]` *(Done)*
 - [x] **M6:** Get started with lakehouses in Microsoft Fabric `[Theory + Lab]` *(Done)*
 - [x] **M7:** Use Apache Spark in Microsoft Fabric *(Duplicate of M3)*
 - [x] **M8:** Work with Delta Lake tables in Microsoft Fabric `[Theory + Lab]` *(Done)*
 - [x] **M9:** Ingest data with Dataflows Gen2 in Microsoft Fabric *(Duplicate of M1)*
 - [x] **M10:** Orchestrate processes and data movement with Microsoft Fabric *(Duplicate of M2)*
-- [x] **M11:** Organize a Fabric lakehouse using medallion architecture design `[Theory + Lab]` *(Done)*
+- [x] **M11:** Organize a Fabric lakehouse using medallion architecture design `[Theory + Lab]` *(Done — Completes Path 2!)*
 
 ### Path 3: Implement a Data Warehouse with Microsoft Fabric (7 Modules / 5 Unique / 2 Duplicates)
 - [ ] **M12:** Get started with data warehouses in Microsoft Fabric `[Theory]` (Theory: 1.0h)
@@ -70,7 +71,6 @@ Below is the complete list of modules across all 5 official learning paths on Mi
 ### 🗺️ Week 2: July 18 – July 24 (Real-Time Intelligence & Data Warehousing)
 - [x] **July 18-19:** Study **M4** `[Theory + Lab]` *(Done — Completes Paths 1 & 2!)*
 - [ ] **July 20 (Mon) [Today]:** Study **M12** `[Theory]` (1.0h) & **M13** `[Theory + Lab]` (2.5h)
-- [ ] **July 20 (Mon):** 🛡️ **Catch-Up & Review Day 2** (Complete M11 Lab + buffer)
 - [ ] **July 21 (Tue):** Study **M14** `[Theory + Lab]` (2.5h)
 - [ ] **July 22 (Wed):** Study **M15** `[Theory + Lab]` (2.0h) & **M16** `[Theory + Lab]` (2.0h)
 - [ ] **July 23 (Thu):** 🏁 **Checkpoint 1 & 2:** Review Paths 1, 2, & 3 summaries + complete assessments (3.0h)
