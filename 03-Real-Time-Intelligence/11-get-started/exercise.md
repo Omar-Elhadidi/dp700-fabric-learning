@@ -34,6 +34,7 @@ This hands-on lab covers end-to-end Real-Time Intelligence (RTI) in Microsoft Fa
 8. Re-open `stock-data` in Eventstream to verify that `stock` table appears as a green destination node.
 
    * 📸 **Screenshot Checkpoint 1 (`11_eventstream_destination.png`):** Capture the Eventstream canvas showing the `stock` source -> `stock-data-stream` -> `stock` table destination node.
+     ![Eventstream canvas with stock source, stream, and KQL database destination](screenshots/11_eventstream_destination.png)
 
 ---
 
@@ -55,6 +56,7 @@ This hands-on lab covers end-to-end Real-Time Intelligence (RTI) in Microsoft Fa
 4. Re-run after a few seconds to verify `avgPrice` updates dynamically as new streaming events land.
 
    * 📸 **Screenshot Checkpoint 2 (`11_kql_query_result.png`):** Capture the KQL Queryset window showing the query execution and the output table of stock symbols and `avgPrice`.
+     ![KQL Queryset executing 5m average bid price query with output table](screenshots/11_kql_query_result.png)
 
 ---
 
@@ -70,6 +72,7 @@ This hands-on lab covers end-to-end Real-Time Intelligence (RTI) in Microsoft Fa
 5. Select **Apply changes**.
 
    * 📸 **Screenshot Checkpoint 3 (`11_realtime_dashboard.png`):** Capture the published Real-Time Dashboard displaying the live column chart of average stock prices.
+     ![Real-Time Dashboard showing column chart of average stock prices](screenshots/11_realtime_dashboard.png)
 
 ---
 
@@ -89,3 +92,4 @@ This hands-on lab covers end-to-end Real-Time Intelligence (RTI) in Microsoft Fa
 4. Open the Activator item -> Select the alert under the `avgPrice` node -> View the **History** tab.
 
    * 📸 **Screenshot Checkpoint 4 (`11_activator_alert.png`):** Capture the Activator rule design page showing the trigger condition (`avgPrice increases by 100`) and the alert history pane.
+     ![Activator alert rule configuration pane showing 5-minute avgPrice increase condition](screenshots/11_activator_alert.png)
