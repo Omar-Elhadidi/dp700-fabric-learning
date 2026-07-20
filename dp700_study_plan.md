@@ -34,7 +34,14 @@ Below is the complete list of modules across all 5 official learning paths on Mi
 - [x] **M10:** Orchestrate processes and data movement with Microsoft Fabric *(Duplicate of M2)*
 - [x] **M11:** Organize a Fabric lakehouse using medallion architecture design `[Theory + Lab]` *(Done — Completes Path 2!)*
 
-### Path 3: Implement a Data Warehouse with Microsoft Fabric (7 Modules / 5 Unique / 2 Duplicates)
+### Path 3: Implement Real-Time Intelligence with Microsoft Fabric (5 Modules / 4 Unique / 1 Duplicate)
+- [ ] **M19:** Get started with Real-Time Intelligence in Microsoft Fabric `[Theory]` (Theory: 1.0h)
+- [ ] **M20:** Create and manage an Eventhouse in Microsoft Fabric `[Theory + Lab]` (Theory: 1.0h, Lab: 1.0h)
+- [ ] **M21:** Ingest real-time data with Microsoft Fabric Eventstreams `[Theory + Lab]` (Theory: 1.0h, Lab: 1.5h)
+- [ ] **M22:** Query real-time data in a Microsoft Fabric KQL database `[Theory + Lab]` (Theory: 1.0h, Lab: 1.5h)
+- [x] **M23:** Load data with Dataflows Gen2 in Microsoft Fabric *(Duplicate of M1)*
+
+### Path 4: Implement a Data Warehouse with Microsoft Fabric (7 Modules / 5 Unique / 2 Duplicates)
 - [ ] **M12:** Get started with data warehouses in Microsoft Fabric `[Theory]` (Theory: 1.0h)
 - [ ] **M13:** Load data into a Microsoft Fabric data warehouse `[Theory + Lab]` (Theory: 1.0h, Lab: 1.5h)
 - [ ] **M14:** Query a Microsoft Fabric data warehouse `[Theory + Lab]` (Theory: 1.0h, Lab: 1.5h)
@@ -42,13 +49,6 @@ Below is the complete list of modules across all 5 official learning paths on Mi
 - [ ] **M16:** Secure a Microsoft Fabric data warehouse `[Theory + Lab]` (Theory: 1.0h, Lab: 1.0h)
 - [x] **M17:** Ingest data with Dataflows Gen2 in Microsoft Fabric *(Duplicate of M1)*
 - [x] **M18:** Orchestrate processes and data movement with Microsoft Fabric *(Duplicate of M2)*
-
-### Path 4: Implement Real-Time Intelligence with Microsoft Fabric (5 Modules / 4 Unique / 1 Duplicate)
-- [ ] **M19:** Get started with Real-Time Intelligence in Microsoft Fabric `[Theory]` (Theory: 1.0h)
-- [ ] **M20:** Create and manage an Eventhouse in Microsoft Fabric `[Theory + Lab]` (Theory: 1.0h, Lab: 1.0h)
-- [ ] **M21:** Ingest real-time data with Microsoft Fabric Eventstreams `[Theory + Lab]` (Theory: 1.0h, Lab: 1.5h)
-- [ ] **M22:** Query real-time data in a Microsoft Fabric KQL database `[Theory + Lab]` (Theory: 1.0h, Lab: 1.5h)
-- [x] **M23:** Load data with Dataflows Gen2 in Microsoft Fabric *(Duplicate of M1)*
 
 ### Path 5: Manage a Microsoft Fabric Environment (4 Modules / 4 Unique)
 - [ ] **M24:** Administer a Microsoft Fabric environment `[Theory]` (Theory: 1.5h)
@@ -69,15 +69,15 @@ Below is the complete list of modules across all 5 official learning paths on Mi
 - [x] **July 15-18:** Study **M11** `[Theory + Lab]` *(Done — Lab completed July 18)*
 
 ### 🗺️ Week 2: July 18 – July 24 (Real-Time Intelligence & Data Warehousing)
-- [x] **July 18-19:** Study **M4** `[Theory + Lab]` *(Done — Completes Paths 1 & 2!)*
-- [ ] **July 20 (Mon) [Today]:** Study **M12** `[Theory]` (1.0h) & **M13** `[Theory + Lab]` (2.5h)
-- [ ] **July 21 (Tue):** Study **M14** `[Theory + Lab]` (2.5h)
-- [ ] **July 22 (Wed):** Study **M15** `[Theory + Lab]` (2.0h) & **M16** `[Theory + Lab]` (2.0h)
-- [ ] **July 23 (Thu):** 🏁 **Checkpoint 1 & 2:** Review Paths 1, 2, & 3 summaries + complete assessments (3.0h)
-- [ ] **July 24 (Fri):** Study **M19** `[Theory]` (1.0h) & **M20** `[Theory + Lab]` (2.0h)
+- [x] **July 18-19:** Study **M4** `[Theory + Lab]` *(Done — Completes Path 1!)*
+- [ ] **July 20 (Mon) [Today]:** Study **M19** `[Theory]` (1.0h) & **M20** `[Theory + Lab]` (2.0h)
+- [ ] **July 21 (Tue):** Study **M21** `[Theory + Lab]` (2.5h) & **M22** `[Theory + Lab]` (2.5h) *(Completes Path 3)*
+- [ ] **July 22 (Wed):** Study **M12** `[Theory]` (1.0h) & **M13** `[Theory + Lab]` (2.5h)
+- [ ] **July 23 (Thu):** Study **M14** `[Theory + Lab]` (2.5h)
+- [ ] **July 24 (Fri):** Study **M15** `[Theory + Lab]` (2.0h) & **M16** `[Theory + Lab]` (2.0h) *(Completes Path 4)*
 
-### 🗺️ Week 3: July 25 – July 29 (Real-Time KQL, Admin & Git Integration)
-- [ ] **July 25 (Sat):** Study **M21** `[Theory + Lab]` (2.5h) & **M22** `[Theory + Lab]` (2.5h) *(Completes Path 4)*
+### 🗺️ Week 3: July 25 – July 29 (Admin & Git Integration, Checkpoints)
+- [ ] **July 25 (Sat):** 🏁 **Checkpoint 1, 2, & 3:** Review Path 1, 2, & 3 summaries + complete assessments (3.0h)
 - [ ] **July 26 (Sun):** Study **M24** `[Theory]` (1.5h) & **M25** `[Theory + Lab]` (2.0h)
 - [ ] **July 27 (Mon):** Study **M26** `[Theory + Lab]` (2.0h) & **M27** `[Theory + Lab]` (2.0h) *(Completes Path 5)*
 - [ ] **July 28 (Tue):** 🛡️ **Final Verification Buffer** (All capacity-dependent tests verified)
