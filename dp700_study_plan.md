@@ -15,6 +15,14 @@
 
 ---
 
+## 📺 YouTube Study Resources
+*Use these videos to reinforce concepts and prepare for the exam, especially during your revision phase.*
+- [ ] **Data with Baraa:** Review his Data Engineering tutorials to solidify core concepts (as you previously mentioned).
+- [ ] **DP-700 Exam Full Course (Aleksi Partanen):** 11-hour comprehensive Microsoft Fabric Data Engineer crash course. *(Highly recommended for Phase 2 Revision)*
+- [ ] **Get Certified: Fabric Data Engineer (Microsoft Reactor):** 1-hour accelerated DP-700 overview.
+
+---
+
 ## 📚 Master Module Map (M1 - M26)
 
 ### Path 1: Ingest Data with Microsoft Fabric
