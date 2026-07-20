@@ -22,7 +22,7 @@ Below is the complete list of modules across all 5 official learning paths on Mi
 - [x] **M1:** Ingest data with Dataflows Gen2 in Microsoft Fabric `[Theory + Lab]` *(Done)*
 - [x] **M2:** Orchestrate processes and data movement with Microsoft Fabric `[Theory + Lab]` *(Done)*
 - [x] **M3:** Use Apache Spark in Microsoft Fabric `[Theory + Lab]` *(Done)*
-- [ ] **M4:** Work with real-time data in an Eventhouse `[Theory + Lab]` (Theory: 1.0h, Lab: 1.5h)
+- [x] **M4:** Work with real-time data in an Eventhouse `[Theory + Lab]` *(Done — Completes Paths 1 & 2!)*
 
 ### Path 2: Implement a Lakehouse with Microsoft Fabric (7 Modules / 4 Unique / 3 Duplicates)
 - [x] **M5:** Introduction to end-to-end analytics using Microsoft Fabric `[Theory]` *(Done)*
@@ -68,8 +68,8 @@ Below is the complete list of modules across all 5 official learning paths on Mi
 - [x] **July 15-18:** Study **M11** `[Theory + Lab]` *(Done — Lab completed July 18)*
 
 ### 🗺️ Week 2: July 18 – July 24 (Real-Time Intelligence & Data Warehousing)
-- [/] **July 18 (Sat) [Today]:** Study **M4** `[Theory + Lab]` (2.5h) *(Completes Paths 1 & 2)*
-- [ ] **July 19 (Sun):** Study **M12** `[Theory]` (1.0h) & **M13** `[Theory + Lab]` (2.5h)
+- [x] **July 18-19:** Study **M4** `[Theory + Lab]` *(Done — Completes Paths 1 & 2!)*
+- [ ] **July 20 (Mon) [Today]:** Study **M12** `[Theory]` (1.0h) & **M13** `[Theory + Lab]` (2.5h)
 - [ ] **July 20 (Mon):** 🛡️ **Catch-Up & Review Day 2** (Complete M11 Lab + buffer)
 - [ ] **July 21 (Tue):** Study **M14** `[Theory + Lab]` (2.5h)
 - [ ] **July 22 (Wed):** Study **M15** `[Theory + Lab]` (2.0h) & **M16** `[Theory + Lab]` (2.0h)
