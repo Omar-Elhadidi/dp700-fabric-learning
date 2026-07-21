@@ -38,6 +38,7 @@ This hands-on lab covers ingesting streaming bicycle rental data using Microsoft
 4. Wait ~1 minute -> Select `bikes-table` node on canvas -> Verify rows in **Data preview** pane.
 
    * 📸 **Screenshot Checkpoint 1 (`12_raw_bikes_destination.png`):** Capture the Eventstream canvas showing `Bicycles` source -> `Bicycle-data-stream` -> `bikes-table` Eventhouse destination node with live data preview.
+     ![Eventstream canvas showing raw bicycle stream routed to bikes-table Eventhouse destination](screenshots/12_raw_bikes_destination.png)
 
 ---
 
@@ -53,6 +54,7 @@ This hands-on lab covers ingesting streaming bicycle rental data using Microsoft
 3. Verify that raw bicycle records (`Street`, `No_Bikes`, etc.) are actively landing in the database.
 
    * 📸 **Screenshot Checkpoint 2 (`12_raw_kql_query.png`):** Capture the KQL query editor executing the `bikes` table ingestion time query and displaying raw stream rows.
+     ![KQL Queryset executing 24h ingestion query on raw bikes table](screenshots/12_raw_kql_query.png)
 
 ---
 
@@ -78,6 +80,7 @@ This hands-on lab covers ingesting streaming bicycle rental data using Microsoft
 7. Select `bikes-by-street-table` node -> Inspect **Data preview** pane (observe `Street`, `SUM_no_Bikes`, and `Window_End_Time` columns).
 
    * 📸 **Screenshot Checkpoint 3 (`12_transformed_eventstream.png`):** Capture the full Eventstream canvas showing the `GroupByStreet` transformation node connected to `bikes-by-street-table` destination node.
+     ![Eventstream canvas with GroupByStreet tumbling window transformation node connected to bikes-by-street-table](screenshots/12_transformed_eventstream.png)
 
 ---
 
@@ -93,3 +96,4 @@ This hands-on lab covers ingesting streaming bicycle rental data using Microsoft
 3. Observe live grouped results breaking down total bike availability per street for each 5-second tumbling window.
 
    * 📸 **Screenshot Checkpoint 4 (`12_transformed_kql_query.png`):** Capture the KQL query editor executing the `bikes-by-street` 5-second window summary query with output results.
+     ![KQL Queryset executing 5-second tumbling window summary query on bikes-by-street table](screenshots/12_transformed_kql_query.png)
