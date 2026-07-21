@@ -33,7 +33,7 @@
 
 ### Path 3: Implement Real-Time Intelligence with Microsoft Fabric
 - [x] **M11:** Get started with Real-Time Intelligence in Microsoft Fabric `[Theory + Lab]` *(Done)*
-- [ ] **M12:** Use Eventstream in Microsoft Fabric `[Theory + Lab]`
+- [/] **M12:** Use Eventstream in Microsoft Fabric `[Theory + Lab]` *(Theory Done)*
 - [x] **M13:** Work with real-time data in an Eventhouse in Microsoft Fabric `[Theory + Lab]` *(Done previously)*
 - [ ] **M14:** Create Real-Time Dashboards with Microsoft Fabric `[Theory + Lab]`
 - [ ] **M15:** Use Activator in Microsoft Fabric `[Theory + Lab]`
