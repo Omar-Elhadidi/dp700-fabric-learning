@@ -35,7 +35,7 @@
 - [x] **M11:** Get started with Real-Time Intelligence in Microsoft Fabric `[Theory + Lab]` *(Done)*
 - [x] **M12:** Use Eventstream in Microsoft Fabric `[Theory + Lab]` *(Done)*
 - [x] **M13:** Work with real-time data in an Eventhouse in Microsoft Fabric `[Theory + Lab]` *(Done previously)*
-- [ ] **M14:** Create Real-Time Dashboards with Microsoft Fabric `[Theory + Lab]`
+- [/] **M14:** Create Real-Time Dashboards with Microsoft Fabric `[Theory + Lab]` *(Theory Done)*
 - [ ] **M15:** Use Activator in Microsoft Fabric `[Theory + Lab]`
 
 ### Path 4: Implement a Data Warehouse with Microsoft Fabric
