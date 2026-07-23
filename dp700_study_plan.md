@@ -31,12 +31,12 @@
 - [x] **M9:** Orchestrate processes and data movement with Microsoft Fabric *(Duplicate of M2 - Auto Done)*
 - [x] **M10:** Organize a Fabric lakehouse using medallion architecture design `[Theory + Lab]` *(Done)*
 
-### Path 3: Implement Real-Time Intelligence with Microsoft Fabric
+### Path 3: Implement Real-Time Intelligence with Microsoft Fabric (COMPLETED 🎉)
 - [x] **M11:** Get started with Real-Time Intelligence in Microsoft Fabric `[Theory + Lab]` *(Done)*
 - [x] **M12:** Use Eventstream in Microsoft Fabric `[Theory + Lab]` *(Done)*
 - [x] **M13:** Work with real-time data in an Eventhouse in Microsoft Fabric `[Theory + Lab]` *(Done previously)*
 - [/] **M14:** Create Real-Time Dashboards with Microsoft Fabric `[Theory + Lab]` *(Theory Done)*
-- [ ] **M15:** Use Activator in Microsoft Fabric `[Theory + Lab]`
+- [x] **M15:** Use Activator in Microsoft Fabric `[Theory + Lab]` *(Theory Done — Completes Path 3!)*
 
 ### Path 4: Implement a Data Warehouse with Microsoft Fabric
 - [ ] **M16:** Get started with data warehouses in Microsoft Fabric `[Theory]`
