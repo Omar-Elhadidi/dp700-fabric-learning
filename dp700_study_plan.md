@@ -39,7 +39,7 @@
 - [x] **M15:** Use Activator in Microsoft Fabric `[Theory + Lab]` *(Theory Done — Completes Path 3!)*
 
 ### Path 4: Implement a Data Warehouse with Microsoft Fabric
-- [ ] **M16:** Get started with data warehouses in Microsoft Fabric `[Theory]`
+- [x] **M16:** Get started with data warehouses in Microsoft Fabric `[Theory]` *(Done)*
 - [ ] **M17:** Load data into a Microsoft Fabric data warehouse `[Theory + Lab]`
 - [ ] **M18:** Query a Microsoft Fabric data warehouse `[Theory + Lab]`
 - [ ] **M19:** Monitor a Microsoft Fabric data warehouse `[Theory + Lab]`
