@@ -1,9 +1,9 @@
 # 🚀 Microsoft Fabric Data Engineer (DP-700) Study Plan
 
-*   **Exam Date:** August 11, 2026 · 10:30 AM · GEF Alexandria
-*   **Current Date:** July 20, 2026
-*   **Total Days Left:** 22 Days
-*   **Progress:** 8 / 21 Unique Modules Completed (13 / 26 Total Modules completed counting auto-done)
+*   **Exam Date:** August 16, 2026 · 10:30 AM · GEF Alexandria
+*   **Current Date:** July 27, 2026
+*   **Total Days Left:** 20 Days
+*   **Progress:** 10 / 21 Unique Modules Completed (15 / 26 Total Modules completed counting auto-done)
 *   **🚨 Highest Priority Constraint:** Active Azure Fabric Capacity ($200 credits) expires on **July 29**. All modules requiring hands-on labs must be completed and cleared by **July 28**.
 *   **🏢 DEPI Microsoft Data Engineer Class Schedule (Starts July 17):**
     *   *Saturdays (Physical - Alexandria):* 1:00 PM – 4:00 PM
@@ -12,6 +12,7 @@
     *   *Fridays (Online):* 7:00 PM – 10:00 PM
     *   *Study Rule:* Complete daily Fabric study modules *before* class times on these days to avoid overload.
 *   **🎯 Exam Prep Strategy:** Prioritize passing the exam over mastering deep Spark coding details. Focus on core architectural concepts, security, configurations, and administrative properties first. Leave complex PySpark syntax optimization for post-exam portfolio building.
+*   **📺 Supplemental Resource:** Aleksi's DP-700 Certification YouTube Playlist — **Currently on Video 9**.
 
 ---
 
@@ -82,7 +83,7 @@
 
 ---
 
-## 📅 Phase 2: Theory & Practice Exam Window (July 30 – August 10)
+## 📅 Phase 2: Theory & Practice Exam Window (July 30 – August 15)
 *No active Fabric capacity required. Focus purely on retrieval practice, diagnostics, and documentation lookup speed.*
 
 ### 🗺️ Week 4: July 30 – August 5 (Diagnostic Testing & Drill Phase)
@@ -94,13 +95,20 @@
 - [ ] **August 4 (Tue):** Drill weak topics exposed by Run 2. Practice navigating Microsoft Learn document paths.
 - [ ] **August 5 (Wed):** Deep-dive review of performance optimization (V-Order, custom partitions, autotuning).
 
-### 🗺️ Week 5: August 6 – August 10 (Target Scoring & Final Revision)
+### 🗺️ Week 5: August 6 – August 10 (Target Scoring & Aleksi Playlist Completion)
 - [ ] **August 6 (Thu):** Review Git integration vs. Deployment pipelines.
 - [ ] **August 7 (Fri):** 📝 **Official Microsoft Practice Assessment - Run 3.** (Timed, closed-book. **Target Score: 90%+**).
-- [ ] **August 8 (Sat):** 🛡️ **Catch-Up / Buffer Day**
+- [ ] **August 8 (Sat):** 🛡️ **Catch-Up / Buffer Day** + Continue Aleksi playlist.
 - [ ] **August 9 (Sun):** 📚 **Revision Day 1:** Complete review of all repository `notes.md` from Path 1 to Path 5.
-- [ ] **August 10 (Mon):** 📚 **Revision Day 2:** Focus on quick lookup methods in MS Learn and flashcarding configuration thresholds/defaults. Sleep early.
-- [ ] **August 11 (Tue):** 🏁 **EXAM DAY (10:30 AM at GEF Alexandria)**
+- [ ] **August 10 (Mon):** 📚 **Revision Day 2:** Focus on quick lookup methods in MS Learn and flashcarding configuration thresholds/defaults.
+
+### 🗺️ Week 6: August 11 – August 16 (Final Revision & Exam Day)
+- [ ] **August 11 (Tue):** Finish Aleksi playlist + review weak areas from Practice Assessment Run 3.
+- [ ] **August 12 (Wed):** 📝 **Official Microsoft Practice Assessment - Run 4.** (Timed, closed-book. **Target Score: 90%+**).
+- [ ] **August 13 (Thu):** Drill any remaining weak topics. Cross-reference Aleksi insights with repo notes.
+- [ ] **August 14 (Fri):** 🛡️ **Light Review / Buffer Day** — Skim all module summaries.
+- [ ] **August 15 (Sat):** 📚 **Final Revision Day:** Quick pass through all notes, flashcard key configs/thresholds. Sleep early.
+- [ ] **August 16 (Sun):** 🏁 **EXAM DAY (10:30 AM at GEF Alexandria)**
 
 ---
 
