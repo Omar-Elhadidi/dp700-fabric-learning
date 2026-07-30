@@ -42,7 +42,7 @@
 ### Path 4: Implement a Data Warehouse with Microsoft Fabric
 - [x] **M16:** Get started with data warehouses in Microsoft Fabric `[Theory]` *(Done)*
 - [/] **M17:** Load data into a Microsoft Fabric data warehouse `[Theory]` *(Theory Done — Lab Deferred)*
-- [/] **M18:** Query a Microsoft Fabric data warehouse `[Theory]` *(In Progress)*
+- [x] **M18:** Query a Microsoft Fabric data warehouse `[Theory]` *(Theory Done — Lab Deferred)*
 - [ ] **M19:** Monitor a Microsoft Fabric data warehouse `[Theory]`
 - [ ] **M20:** Secure a Microsoft Fabric data warehouse `[Theory]`
 - [x] **M21:** Ingest data with Dataflows Gen2 in Microsoft Fabric *(Duplicate of M1 - Auto Done)*
