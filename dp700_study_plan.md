@@ -43,7 +43,7 @@
 - [x] **M16:** Get started with data warehouses in Microsoft Fabric `[Theory]` *(Done)*
 - [/] **M17:** Load data into a Microsoft Fabric data warehouse `[Theory]` *(Theory Done — Lab Deferred)*
 - [x] **M18:** Query a Microsoft Fabric data warehouse `[Theory]` *(Theory Done — Lab Deferred)*
-- [/] **M18b:** Get started with Copilot in Microsoft Fabric for Data Warehouse `[Theory]` *(In Progress)*
+- [x] **M18b:** Get started with Copilot in Microsoft Fabric for Data Warehouse `[Theory]` *(Theory Done)*
 - [ ] **M19:** Monitor a Microsoft Fabric data warehouse `[Theory]`
 - [ ] **M20:** Secure a Microsoft Fabric data warehouse `[Theory]`
 - [x] **M21:** Ingest data with Dataflows Gen2 in Microsoft Fabric *(Duplicate of M1 - Auto Done)*
