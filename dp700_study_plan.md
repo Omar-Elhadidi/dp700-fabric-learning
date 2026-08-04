@@ -51,7 +51,7 @@
 
 ### Path 5: Manage a Microsoft Fabric Environment
 - [x] **M23:** Implement Continuous Integration and Continuous Delivery (CI/CD) in Microsoft Fabric `[Theory]` *(Theory Done)*
-- [ ] **M24:** Monitor Activities in Microsoft Fabric `[Theory]`
+- [x] **M24:** Monitor Activities in Microsoft Fabric `[Theory]` *(Theory Done)*
 - [ ] **M25:** Administer a Microsoft Fabric Environment `[Theory]`
 - [ ] **M26:** Secure data access in Microsoft Fabric `[Theory]`
 
