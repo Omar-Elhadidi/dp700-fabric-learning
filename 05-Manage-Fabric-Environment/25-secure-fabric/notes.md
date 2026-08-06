@@ -1,4 +1,4 @@
-# M26: Secure Data Access in Microsoft Fabric
+# M25: Secure Data Access in Microsoft Fabric
 
 Learn how to implement multi-layered security in Microsoft Fabric using Workspace Roles, Item Permissions, SQL Granular Permissions, and OneLake Security Roles (data access control at the file/folder and table level).
 

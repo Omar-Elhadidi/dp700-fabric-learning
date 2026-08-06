@@ -1,4 +1,4 @@
-# M25: Administer a Microsoft Fabric Environment
+# M26: Administer a Microsoft Fabric Environment
 
 Learn how to configure, govern, and manage an enterprise Microsoft Fabric tenant—exploring admin hierarchies, tenant settings, domain structures, admin delegation, user licensing, capacity management, and platform health monitoring.
 
