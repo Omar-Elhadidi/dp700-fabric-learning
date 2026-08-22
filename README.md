@@ -8,6 +8,10 @@ This repository contains my comprehensive study notes, implementation patterns, 
 
 It serves as a personal knowledge base and a demonstration of my understanding of enterprise-level data engineering using the Microsoft Cloud ecosystem.
 
+## 🏆 Certification
+<!-- Replace the link below with your actual certificate image link when you upload it to the repo -->
+![Microsoft Certified: Fabric Data Engineer Associate](./certificate-placeholder.png)
+
 ## 🧠 Core Competencies Demonstrated
 *   **Architecture:** Medallion Architecture (Bronze/Silver/Gold), Lakehouses vs. Warehouses, OneLake ecosystem.
 *   **Data Pipelines & Orchestration:** Azure Data Factory (ADF) pipelines, Dataflows Gen2, incremental loading strategies.
@@ -21,7 +25,7 @@ It serves as a personal knowledge base and a demonstration of my understanding o
 
 The documentation is organized strictly by the 5 official Microsoft exam domains:
 
-`	ext
+```text
 📁 01-Ingest-Data/
 ├── 01-dataflows-gen2/           
 ├── 02-orchestrate-pipelines/    
@@ -30,23 +34,22 @@ The documentation is organized strictly by the 5 official Microsoft exam domains
 
 📁 02-Implement-Lakehouse/       
 ├── medallion-architecture/
-├── delta-lake-tables/
+└── delta-lake-tables/
 
 📁 03-Real-Time-Intelligence/    
 ├── eventstreams/
-├── kql-databases/
+└── kql-databases/
 
 📁 04-Implement-Data-Warehouse/  
 ├── t-sql-querying/
-├── warehouse-security/
+└── warehouse-security/
 
 📁 05-Manage-Fabric-Environment/ 
 ├── ci-cd-git-integration/
-├── capacity-monitoring/
-`
+└── capacity-monitoring/
+```
 
-Each module folder contains detailed 
-otes.md outlining the theory, syntax, limitations, and best practices for that specific tool.
+Each module folder contains detailed `notes.md` outlining the theory, syntax, limitations, and best practices for that specific tool.
 
 ---
 
