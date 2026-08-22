@@ -10,7 +10,8 @@ It serves as a personal knowledge base and a demonstration of my understanding o
 
 ## 🏆 Certification
 <!-- Replace the link below with your actual certificate image link when you upload it to the repo -->
-![Microsoft Certified: Fabric Data Engineer Associate](<img width="1328" height="669" alt="image" src="https://github.com/user-attachments/assets/0dcdd4d7-8855-4da1-af5b-7f6e932fa5ba" />
+<img width="1328" height="669" alt="image" src="https://github.com/user-attachments/assets/dfd275d1-d99e-4186-9960-f7a34aa86f04" />
+
 )
 
 ## 🧠 Core Competencies Demonstrated
