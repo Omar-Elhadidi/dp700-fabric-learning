@@ -9,10 +9,7 @@ This repository contains my comprehensive study notes, implementation patterns, 
 It serves as a personal knowledge base and a demonstration of my understanding of enterprise-level data engineering using the Microsoft Cloud ecosystem.
 
 ## 🏆 Certification
-<!-- Replace the link below with your actual certificate image link when you upload it to the repo -->
 <img width="1328" height="669" alt="image" src="https://github.com/user-attachments/assets/dfd275d1-d99e-4186-9960-f7a34aa86f04" />
-
-)
 
 ## 🧠 Core Competencies Demonstrated
 *   **Architecture:** Medallion Architecture (Bronze/Silver/Gold), Lakehouses vs. Warehouses, OneLake ecosystem.
@@ -25,33 +22,40 @@ It serves as a personal knowledge base and a demonstration of my understanding o
 
 ## 📂 Repository Structure
 
-The documentation is organized strictly by the 5 official Microsoft exam domains:
+The documentation is organized strictly by the 5 official Microsoft exam domains, along with my historical study plan.
 
 ```text
-📁 01-Ingest-Data/
-├── 01-dataflows-gen2/           
-├── 02-orchestrate-pipelines/    
-├── 03-apache-spark/
-└── 04-real-time-eventhouse/
-
-📁 02-Implement-Lakehouse/       
-├── medallion-architecture/
-└── delta-lake-tables/
-
-📁 03-Real-Time-Intelligence/    
-├── eventstreams/
-└── kql-databases/
-
-📁 04-Implement-Data-Warehouse/  
-├── t-sql-querying/
-└── warehouse-security/
-
-📁 05-Manage-Fabric-Environment/ 
-├── ci-cd-git-integration/
-└── capacity-monitoring/
+📁 dp700-fabric-learning/
+├── 📄 dp700_study_plan.md           <-- Historical 4-week execution plan
+│
+├── 📁 01-Ingest-Data/
+│   ├── 01-dataflows-gen2/           
+│   ├── 02-orchestrate-pipelines/    
+│   ├── 03-apache-spark/
+│   └── 04-real-time-eventhouse/
+│
+├── 📁 02-Implement-Lakehouse/       
+│   ├── medallion-architecture/
+│   └── delta-lake-tables/
+│
+├── 📁 03-Real-Time-Intelligence/    
+│   ├── eventstreams/
+│   └── kql-databases/
+│
+├── 📁 04-Implement-Data-Warehouse/  
+│   ├── t-sql-querying/
+│   └── warehouse-security/
+│
+└── 📁 05-Manage-Fabric-Environment/ 
+    ├── ci-cd-git-integration/
+    └── capacity-monitoring/
 ```
 
-Each module folder contains detailed `notes.md` outlining the theory, syntax, limitations, and best practices for that specific tool.
+### 🛠️ Inside Each Module Folder:
+To prove **hands-on experience** beyond just theory, each module folder is structured to include:
+*   `notes.md`: Detailed theory, syntax, limitations, and best practices.
+*   `exercise.md`: Step-by-step walkthroughs of practical implementations.
+*   `screenshots/`: Visual proof of successful pipeline runs, Lakehouse configurations, and SQL/PySpark query executions inside the actual Microsoft Fabric environment.
 
 ---
 
